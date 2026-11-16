@@ -1,0 +1,402 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ecuaplac | Aviso Legal</title>
+<meta name="description" content="Aviso Legal de Ecuaplac. Información sobre el titular del sitio web, propiedad intelectual, política de privacidad y legislación aplicable.">
+<meta name="robots" content="noindex, nofollow">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+  nav {
+    transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    background-color: #000000 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+  .ecuador-divider {
+    height: 3px; width: 100%;
+    background: linear-gradient(to right, transparent 15%, #FCD116 25%, #FCD116 48%, #003893 50%, #003893 62%, #CE1126 65%, #CE1126 75%, transparent 85%);
+    opacity: 0.8; border: none;
+  }
+  .legal-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #141414; margin-bottom: 12px; margin-top: 40px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .legal-section h2:first-of-type { margin-top: 0; }
+  .legal-section p { color: #4c4546; line-height: 1.8; margin-bottom: 12px; font-size: 15px; }
+  .legal-section ul { list-style: disc; padding-left: 20px; color: #4c4546; line-height: 1.8; font-size: 15px; margin-bottom: 12px; }
+  .legal-section li { margin-bottom: 4px; }
+  .legal-section a { color: #795746; text-decoration: underline; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    theme: { extend: {
+      colors: { "primary": "#141414", "secondary": "#795746", "monolith-white": "#FFFFFF", "on-surface-variant": "#4c4546", "mortar-grey": "#666666", "surface-container-lowest": "#FFFFFF", "background": "#F5F6F7", "outline-variant": "#cfc4c5" },
+      spacing: { "margin-mobile": "20px", "margin-desktop": "64px", "max-width": "1440px" },
+      fontFamily: { "body-md": ["Open Sans"], "label-caps": ["Montserrat"] },
+      fontSize: { "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }] }
+    }}
+  }
+</script>
+
+<style>
+/* Glassmorphism Card Style */
+.card {
+  box-sizing: border-box;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  width: 100%;
+  min-height: 254px;
+}
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/* Hand Loading Animation */
+.hand-loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.hand-loader-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.🤚 { 
+  --skin-color: #E4C560; 
+  --tap-speed: 0.6s; 
+  --tap-stagger: 0.1s; 
+  position: relative; 
+  width: 80px; 
+  height: 60px; 
+}
+.🤚:before { 
+  content: ''; display: block; width: 180%; height: 75%; 
+  position: absolute; top: 70%; right: 20%; 
+  background-color: black; border-radius: 40px 10px; 
+  filter: blur(10px); opacity: 0.3; 
+}
+.🌴 { 
+  display: block; width: 100%; height: 100%; 
+  position: absolute; top: 0; left: 0; 
+  background-color: var(--skin-color); border-radius: 10px 40px; 
+}
+.👍 { 
+  position: absolute; width: 120%; height: 38px; 
+  background-color: var(--skin-color); bottom: -18%; right: 1%; 
+  transform-origin: calc(100% - 20px) 20px; transform: rotate(-20deg); 
+  border-radius: 30px 20px 20px 10px; 
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); 
+  border-left: 2px solid rgba(0, 0, 0, 0.1); 
+}
+.👍:after { 
+  width: 20%; height: 60%; content: ''; 
+  background-color: rgba(255, 255, 255, 0.3); position: absolute; 
+  bottom: -8%; left: 5px; border-radius: 60% 10% 10% 30%; 
+  border-right: 2px solid rgba(0, 0, 0, 0.05); 
+}
+.👉 { 
+  position: absolute; width: 80%; height: 35px; 
+  background-color: var(--skin-color); bottom: 32%; right: 64%; 
+  transform-origin: 100% 20px; animation-duration: calc(var(--tap-speed) * 2); 
+  animation-timing-function: ease-in-out; animation-iteration-count: infinite; 
+  transform: rotate(10deg); 
+}
+.👉:before { 
+  content: ''; position: absolute; width: 140%; height: 30px; 
+  background-color: var(--skin-color); bottom: 8%; right: 65%; 
+  transform-origin: calc(100% - 20px) 20px; transform: rotate(-60deg); 
+  border-radius: 20px; 
+}
+.👉:nth-child(1) { animation-delay: 0; filter: brightness(70%); animation-name: tap-upper-1; }
+.👉:nth-child(2) { animation-delay: var(--tap-stagger); filter: brightness(80%); animation-name: tap-upper-2; }
+.👉:nth-child(3) { animation-delay: calc(var(--tap-stagger) * 2); filter: brightness(90%); animation-name: tap-upper-3; }
+.👉:nth-child(4) { animation-delay: calc(var(--tap-stagger) * 3); filter: brightness(100%); animation-name: tap-upper-4; }
+@keyframes tap-upper-1 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.4); } 40% { transform: rotate(50deg) scale(0.4); } }
+@keyframes tap-upper-2 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.6); } 40% { transform: rotate(50deg) scale(0.6); } }
+@keyframes tap-upper-3 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.8); } 40% { transform: rotate(50deg) scale(0.8); } }
+@keyframes tap-upper-4 { 0%, 50%, 100% { transform: rotate(10deg) scale(1); } 40% { transform: rotate(50deg) scale(1); } }
+</style>
+
+</head>
+<body class="bg-[#F5F6F7] text-[#141414] antialiased pt-[72px] overflow-x-hidden">
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full border-b border-[#1C1C1E] z-50">
+<div class="flex justify-between items-center h-[72px] px-[20px] md:px-[64px] max-w-[1440px] mx-auto">
+  <a class="flex items-center" href="index.html">
+    <img src="./assets/img/logos/LogoHedder.png" alt="ECUAPLAC Logo" class="h-8 md:h-10 w-auto object-contain select-none" loading="lazy">
+  </a>
+  <div class="flex items-center gap-6">
+    <a href="index.html" class="text-white/70 hover:text-white text-[12px] font-semibold tracking-[0.15em] uppercase transition-colors duration-300">← Volver al inicio</a>
+    <div class="flex items-center gap-3 text-[12px] font-semibold tracking-[0.15em] uppercase">
+      <span class="text-white font-bold">ES</span>
+      <a href="legal-notice.html" class="text-white/40 hover:text-white transition-colors duration-300">EN</a>
+    </div>
+  </div>
+</div>
+</nav>
+
+<main class="py-16 px-[20px] md:px-[64px] max-w-[860px] mx-auto">
+
+  <!-- Page Header -->
+  <div class="border-b border-[#141414] pb-6 mb-12">
+    <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#666] block mb-2">Información Legal</span>
+    <h1 class="font-['Montserrat'] text-[36px] md:text-[52px] font-light leading-tight text-[#141414] tracking-tight">Aviso Legal</h1>
+    <p class="text-[#666] mt-3 text-sm">Última actualización: mayo de 2026</p>
+  </div>
+
+  <!-- Legal Content -->
+  <div class="legal-section font-['Open_Sans']">
+
+    <h2>1. Datos del Titular</h2>
+    <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), se facilitan los siguientes datos identificativos:</p>
+    <ul>
+      <li><strong>Denominación:</strong> ECUAPLAC — G &amp; J Reformas Integrales</li>
+      <li><strong>Actividad:</strong> Reformas Integrales, Sistemas de Pladur, Aislamientos Técnicos y Acabados Premium</li>
+      <li><strong>Domicilio:</strong> Palma de Mallorca, Islas Baleares, España</li>
+      <li><strong>Correo electrónico:</strong> <a href="mailto:proyectos@ecuaplac.com">proyectos@ecuaplac.com</a></li>
+      <li><strong>Teléfono:</strong> <a href="tel:+34678159878">+34 678 15 98 78</a></li>
+    </ul>
+
+    <h2>2. Objeto y Ámbito de Aplicación</h2>
+    <p>El presente Aviso Legal regula el acceso y uso del sitio web de ECUAPLAC, cuya finalidad es exclusivamente informativa sobre los servicios y proyectos ofrecidos por la empresa. El acceso a este sitio implica la aceptación plena y sin reservas de las condiciones aquí establecidas.</p>
+    <p>ECUAPLAC se reserva el derecho de modificar el contenido del sitio web en cualquier momento y sin previo aviso, con el fin de mantenerlo actualizado.</p>
+
+    <h2>3. Propiedad Intelectual e Industrial</h2>
+    <p>Todos los contenidos del sitio web —incluyendo textos, imágenes, fotografías, gráficos, logotipos, diseño y código fuente— son propiedad de ECUAPLAC o de terceros que han autorizado su uso, y están protegidos por la legislación española e internacional en materia de propiedad intelectual e industrial.</p>
+    <p>Queda expresamente prohibida la reproducción, distribución, comunicación pública o transformación de cualquier elemento del sitio sin autorización escrita previa de ECUAPLAC. El uso no autorizado constituirá una infracción de los derechos de propiedad intelectual.</p>
+
+    <h2>4. Protección de Datos de Carácter Personal</h2>
+    <p>Los datos personales que el usuario facilite a través del formulario de contacto serán tratados por ECUAPLAC con la finalidad de atender y gestionar la solicitud planteada.</p>
+    <ul>
+      <li><strong>Responsable del tratamiento:</strong> ECUAPLAC — G &amp; J</li>
+      <li><strong>Base legal:</strong> Consentimiento del interesado (Art. 6.1.a del RGPD)</li>
+      <li><strong>Destinatarios:</strong> Los datos no serán cedidos a terceros salvo obligación legal</li>
+      <li><strong>Conservación:</strong> Los datos se conservarán durante el tiempo necesario para atender la solicitud y, como máximo, durante 3 años</li>
+      <li><strong>Derechos:</strong> Puede ejercer sus derechos de acceso, rectificación, supresión, limitación y portabilidad contactando en <a href="mailto:proyectos@ecuaplac.com">proyectos@ecuaplac.com</a></li>
+      <li><strong>Reclamaciones:</strong> Tiene derecho a presentar reclamación ante la Agencia Española de Protección de Datos (aepd.es)</li>
+    </ul>
+
+    <h2>5. Política de Cookies</h2>
+    <p>Este sitio web no utiliza cookies propias de seguimiento, analítica ni publicidad. Únicamente pueden generarse cookies técnicas estrictamente necesarias para el correcto funcionamiento de la navegación, las cuales no almacenan datos personales identificativos.</p>
+    <p>Las imágenes del sitio son servidas a través de <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>, un servicio externo, que puede gestionar sus propias cookies conforme a su política de privacidad.</p>
+
+    <h2>6. Responsabilidad y Exclusión de Garantías</h2>
+    <p>ECUAPLAC no garantiza la disponibilidad continua del sitio web ni la ausencia de errores en sus contenidos. La empresa no será responsable de los daños o perjuicios derivados del uso del sitio o de la imposibilidad de acceso al mismo por causas ajenas a su control.</p>
+    <p>Los enlaces a sitios web de terceros (como redes sociales) se ofrecen únicamente como referencia. ECUAPLAC no asume responsabilidad sobre el contenido ni la política de privacidad de dichos sitios.</p>
+
+    <h2>7. Legislación Aplicable y Jurisdicción</h2>
+    <p>El presente Aviso Legal se rige íntegramente por la legislación española. Para la resolución de cualquier controversia derivada del acceso o uso de este sitio web, las partes se someten expresamente a la jurisdicción de los Juzgados y Tribunales de la ciudad de <strong>Palma de Mallorca</strong>, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+
+  </div>
+
+  <!-- Back Button -->
+  <div class="mt-16 mb-4">
+    <a href="index.html" class="inline-flex items-center gap-2 text-[12px] font-bold uppercase tracking-widest text-[#141414] border border-[#141414]/30 rounded-full px-8 py-3 hover:bg-[#141414] hover:text-white transition-all duration-300 active:scale-95">
+      ← Volver al Inicio
+    </a>
+  </div>
+
+</main>
+
+<div class="ecuador-divider"></div>
+<footer class="w-full bg-[#141414] text-[#A3A3A3] pt-20 pb-10 border-t border-[#1C1C1E] transition-colors duration-300 mt-24">
+  <div class="max-w-[1440px] mx-auto px-[20px] md:px-[64px]">
+    <!-- 3 Column Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 pb-16 border-b border-[#1C1C1E]">
+      
+      <!-- Left Column: Navigation -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left justify-center">
+        <h4 class="font-['Montserrat'] text-[11px] uppercase text-[#FFFFFF] tracking-[0.2em] mb-8 font-bold relative inline-block">
+          Navegación
+          <span class="absolute -bottom-2 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 w-8 h-[2px] bg-[#795746]"></span>
+        </h4>
+        <ul class="flex flex-col gap-3 font-['Open_Sans'] w-full">
+          <li><a class="hover:text-[#FFFFFF] transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index.html#hero-scroll-container">Inicio</a></li>
+          <li><a class="hover:text-[#FFFFFF] transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index.html#reformas">Reformas</a></li>
+          <li><a class="hover:text-[#FFFFFF] transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index.html#servicios">Servicios</a></li>
+          <li><a class="hover:text-[#FFFFFF] transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Center Column: Logo & Description -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <div class="bg-white p-3 inline-flex items-center justify-center rounded-full border-[3px] border-[#FFB81C] shadow-lg w-32 h-32 mb-8 overflow-hidden transition-transform duration-500 hover:scale-105">
+          <img src="./assets/img/logos/Logofotter.jpg" alt="ECUAPLAC Logo" class="w-full h-full object-contain" loading="lazy">
+        </div>
+        <p class="text-[15px] text-[#888] leading-relaxed max-w-sm">
+          Nacidos en Mallorca, forjados en obra. G &amp; J transforman cada espacio con precisión artesanal y acabados de lujo.
+        </p>
+      </div>
+
+      <!-- Right Column: Legal & Social -->
+      <div class="flex flex-col items-center md:items-end text-center md:text-right justify-center">
+        <div class="mb-10 w-full flex flex-col items-center md:items-end">
+          <h4 class="font-['Montserrat'] text-[11px] uppercase text-[#FFFFFF] tracking-[0.2em] mb-8 font-bold relative inline-block">
+            Legal
+            <span class="absolute -bottom-2 left-1/2 md:left-auto md:right-0 -translate-x-1/2 md:translate-x-0 w-8 h-[2px] bg-[#795746]"></span>
+          </h4>
+          <ul class="flex flex-col gap-3 font-['Open_Sans'] w-full">
+            <li><a class="hover:text-[#FFFFFF] transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Aviso Legal</a></li>
+            <li><a class="hover:text-[#FFFFFF] transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Política de Cookies</a></li>
+            <li><a class="hover:text-[#FFFFFF] transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+        
+        <!-- Instagram -->
+        <a class="group flex items-center justify-center gap-4 text-[13px] font-['Montserrat'] tracking-widest text-[#888] hover:text-[#FFFFFF] transition-all duration-300 h-11 px-2" href="https://www.instagram.com/ecuaplac.jyg?igsh=MTJ6d2I3cDFnempyZg==" target="_blank" rel="noopener noreferrer">
+          INSTAGRAM
+          <span class="w-10 h-10 flex items-center justify-center rounded-full border border-[#444] group-hover:border-[#FFFFFF] group-hover:bg-[#FFFFFF] group-hover:text-[#141414] transition-all duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+      
+    </div>
+
+    <!-- Bottom Bar: Full Width Credits -->
+    <div class="pt-10 flex flex-col items-center justify-center w-full">
+      <a href="https://mynextbymusa.com" target="_blank" rel="noopener noreferrer" class="font-['Montserrat'] text-[14px] md:text-[16px] text-[#FFFFFF] tracking-[0.3em] uppercase font-extrabold hover:text-[#795746] hover:tracking-[0.4em] transition-all duration-500 py-4 px-8 inline-flex items-center justify-center h-14">
+        MADE BY MYNEXT
+      </a>
+      <span class="text-[12px] text-[#555] mt-6 font-['Open_Sans'] tracking-wider uppercase">
+        © 2026 ECUAPLAC. TODOS LOS DERECHOS RESERVADOS.
+      </span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+function handleVerMasProyectos(event) {
+  event.preventDefault();
+  const url = event.currentTarget.getAttribute('href');
+  
+  // Create or show the overlay
+  let overlay = document.getElementById('hand-loader');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'hand-loader';
+    overlay.className = 'hand-loader-overlay';
+    overlay.innerHTML = `
+      <div class="🤚"> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="🌴"></div> 
+        <div class="👍"></div> 
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  }
+  
+  // Trigger animation
+  setTimeout(() => {
+    overlay.classList.add('active');
+  }, 10);
+  
+  // Redirect after 1.8 seconds
+  setTimeout(() => {
+    window.location.href = url;
+  }, 1800);
+}
+
+// Global update to handleFormSubmit to use formsubmit.co
+async function handleFormSubmit(formId) {
+  const form = document.getElementById(formId);
+  if(!form) return;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn ? submitBtn.innerText : '';
+  
+  if(submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'ENVIANDO...';
+  }
+  
+  try {
+    const formData = new FormData(form);
+    await fetch("https://formsubmit.co/ajax/Mynextbymusa@gmail.com", {
+      method: "POST",
+      body: formData
+    });
+  } catch(err) {
+    console.error(err);
+  }
+  
+  if (formId === 'presupuestoForm') {
+    form.style.display = 'none';
+    const container = form.parentElement;
+    const successDiv = document.createElement('div');
+    successDiv.id = 'presupuestoSuccess';
+    successDiv.className = 'flex flex-col items-center justify-center text-center py-16 px-4 animate-fade-in';
+    successDiv.innerHTML = `
+      <span class="material-symbols-outlined text-6xl text-secondary mb-6">task_alt</span>
+      <h3 class="font-headline-lg text-headline-lg text-primary mb-4">¡Solicitud Recibida!</h3>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-8">
+        Hemos recibido tus especificaciones técnicas para el proyecto. Un arquitecto de nuestro equipo analizará la viabilidad y te contactará en las próximas 24 horas.
+      </p>
+      <button onclick="closePresupuestoModal()" class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-primary border border-primary/40 rounded-full px-10 py-3 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-md active:scale-95 transition-all duration-300 cursor-pointer">
+        Entendido
+      </button>
+    `;
+    container.appendChild(successDiv);
+  } else if (formId === 'contactForm') {
+    form.reset();
+    if(submitBtn) {
+      submitBtn.innerText = '¡ENVIADO CON ÉXITO!';
+      submitBtn.className = 'font-label-caps text-label-caps uppercase tracking-widest text-monolith-white border border-secondary bg-secondary px-8 py-4 transition-colors duration-300 cursor-pointer';
+    }
+    
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-8 right-8 z-50 bg-primary text-monolith-white px-6 py-4 shadow-xl border border-outline-variant flex items-center gap-3 animate-slide-up font-body-md';
+    toast.innerHTML = `
+      <span class="material-symbols-outlined text-secondary">mail</span>
+      <span>Mensaje enviado. Te responderemos muy pronto.</span>
+    `;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.remove();
+      if(submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalText;
+        submitBtn.className = 'font-label-caps text-label-caps uppercase tracking-widest text-primary border border-primary px-8 py-4 bg-transparent hover:bg-primary hover:text-monolith-white transition-colors duration-300 cursor-pointer active:opacity-70';
+      }
+    }, 4000);
+  }
+}
+</script>
+
+</body></html>

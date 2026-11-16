@@ -1,0 +1,1634 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ecuaplac | Luxury Remodels & Architecture in Mallorca</title>
+<meta name="description" content="Ecuaplac: Specialists in high-end complete remodels and architectural projects in Mallorca. Premium quality, attention to detail, and luxury finishes by G&J.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fadeIn 0.4s ease forwards;
+        }
+        .animate-slide-up {
+          animation: slideUp 0.3s ease forwards;
+        }
+        @keyframes dragHint {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-3px); }
+          75% { transform: translateX(3px); }
+        }
+        .animate-drag-hint {
+          animation: dragHint 2.5s ease-in-out infinite;
+        }
+        .group:hover .animate-drag-hint {
+          animation-play-state: paused;
+        }
+        .scroll-mt-20 {
+          scroll-margin-top: 72px;
+        }
+        /* Dynamic Navigation bar & links */
+        nav {
+            transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(22, 20, 19, 0.75) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+        }
+        nav.scrolled {
+            background-color: rgba(18, 16, 15, 0.88) !important;
+            border-color: rgba(121, 87, 70, 0.25) !important; /* Brand bronze color */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        nav:not(.scrolled) .nav-link:not(.active-nav) {
+            color: #FFFFFF !important;
+            border-color: transparent !important;
+            opacity: 0.85;
+        }
+        nav:not(.scrolled) .nav-link:not(.active-nav):hover {
+            opacity: 1;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+        }
+        nav.scrolled .nav-link:not(.active-nav) {
+            color: #C5C5C5 !important;
+            border-color: transparent !important;
+        }
+        nav.scrolled .nav-link:not(.active-nav):hover {
+            color: #FFFFFF !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+        }
+        .nav-link.active-nav {
+            color: #FFFFFF !important;
+            border-bottom: 2px solid #FFFFFF !important;
+            padding-bottom: 4px;
+            opacity: 1 !important;
+        }
+        .lang-active {
+            color: #FFFFFF !important;
+            font-weight: 700;
+            opacity: 1 !important;
+        }
+        .lang-inactive {
+            color: rgba(255, 255, 255, 0.4) !important;
+        }
+        .lang-inactive:hover {
+            color: #FFFFFF !important;
+        }
+        .lang-separator {
+            border-color: rgba(255, 255, 255, 0.15) !important;
+        }
+        /* Smooth transitions for scrollytelling layers */
+        #hero-sticky-element > div[id^="hero-layer-"] {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+
+        /* Minimalist Vertical Scroll Pagination Dots */
+        .pagination-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.3);
+          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          cursor: pointer;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .pagination-dot:hover {
+          transform: scale(1.25);
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+        .pagination-dot.active {
+          width: 14px;
+          height: 14px;
+          background-color: rgba(40, 40, 40, 0.9);
+          border: 2px solid rgba(255, 255, 255, 0.9);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+        }
+        .pagination-tooltip {
+          position: absolute;
+          right: 24px;
+          opacity: 0;
+          transform: translateX(10px);
+          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+          background-color: rgba(20, 20, 20, 0.9);
+          color: #FFFFFF;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          padding: 4px 8px;
+          border-radius: 2px;
+          pointer-events: none;
+          white-space: nowrap;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .pagination-dot:hover .pagination-tooltip {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        
+        /* Dark theme styling for dots (e.g. over the black Hero section) */
+        .dark-bg .pagination-dot {
+          background-color: rgba(255, 255, 255, 0.4);
+          border-color: rgba(255, 255, 255, 0.1);
+        }
+        .dark-bg .pagination-dot:hover {
+          background-color: rgba(255, 255, 255, 0.85);
+        }
+        .dark-bg .pagination-dot.active {
+          background-color: rgba(255, 255, 255, 0.95);
+          border-color: rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+        }
+        
+        /* ECUAPLAC Separator Logo Vibrancy & Glow */
+        @keyframes ecuaplac-pulse {
+          0%, 100% {
+            transform: scale(1);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)) drop-shadow(0 0 1px rgba(255,255,255,0.05));
+          }
+          50% {
+            transform: scale(1.03);
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5)) drop-shadow(0 0 10px rgba(241, 162, 20, 0.25)) drop-shadow(0 0 10px rgba(74, 144, 226, 0.25)) drop-shadow(0 0 10px rgba(255, 77, 77, 0.25));
+          }
+        }
+        .ecuaplac-animated-logo {
+          animation: ecuaplac-pulse 3.5s ease-in-out infinite;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .ecuaplac-animated-logo:hover {
+          transform: scale(1.08) translateY(-2px);
+          filter: drop-shadow(0 8px 16px rgba(0,0,0,0.6)) drop-shadow(0 0 15px rgba(241, 162, 20, 0.45)) drop-shadow(0 0 15px rgba(74, 144, 226, 0.45)) drop-shadow(0 0 15px rgba(255, 77, 77, 0.45));
+        }
+        .ecuador-divider {
+          height: 3px;
+          width: 100%;
+          background: linear-gradient(to right, transparent 15%, #FCD116 25%, #FCD116 48%, #003893 50%, #003893 62%, #CE1126 65%, #CE1126 75%, transparent 85%);
+          opacity: 0.8;
+          border: none;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            keyframes: {
+              'cartoon-g': {
+                '0%, 100%': { transform: 'rotate(-8deg) translateY(0px)' },
+                '50%': { transform: 'rotate(-12deg) translateY(-6px)' },
+              },
+              'cartoon-j': {
+                '0%, 100%': { transform: 'rotate(6deg) translateY(0px)' },
+                '50%': { transform: 'rotate(10deg) translateY(-6px)' },
+              }
+            },
+            animation: {
+              'cartoon-g': 'cartoon-g 2s ease-in-out infinite',
+              'cartoon-j': 'cartoon-j 2.3s ease-in-out infinite',
+            },
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#FDFBF7",
+                    "on-primary-fixed-variant": "#474747",
+                    "secondary": "#795746",
+                    "on-secondary-fixed": "#2d1509",
+                    "surface-dim": "#dadada",
+                    "monolith-white": "#FFFFFF",
+                    "outline-variant": "#cfc4c5",
+                    "surface-container-lowest": "#FDFBF7",
+                    "background": "#FDFBF7",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-container": "#eeeeee",
+                    "tertiary-fixed": "#e2e2e2",
+                    "outline": "#7e7576",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-container": "#ffd0bb",
+                    "surface-variant": "#e2e2e2",
+                    "primary": "#141414",
+                    "on-surface-variant": "#4c4546",
+                    "on-surface": "#141414",
+                    "secondary-fixed": "#ffdbcc",
+                    "on-primary-fixed": "#141414",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "surface": "#FDFBF7",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#c6c6c6",
+                    "on-secondary-fixed-variant": "#5f3f30",
+                    "canvas-grey": "#F2F2F2",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#303030",
+                    "on-primary-container": "#848484",
+                    "on-secondary-container": "#7a5747",
+                    "tertiary-container": "#141414",
+                    "surface-tint": "#5e5e5e",
+                    "surface-container-low": "#f3f3f3",
+                    "primary-fixed": "#e2e2e2",
+                    "tertiary": "#141414",
+                    "on-error": "#ffffff",
+                    "mortar-grey": "#666666",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary-container": "#848484",
+                    "on-tertiary-fixed": "#141414",
+                    "primary-container": "#141414",
+                    "on-background": "#141414",
+                    "inverse-on-surface": "#f1f1f1",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#eabda9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "max-width": "1440px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "caption": [
+                            "Open Sans"
+                    ],
+                    "headline-lg-mobile": [
+                            "Montserrat"
+                    ],
+                    "body-lg": [
+                            "Open Sans"
+                    ],
+                    "body-md": [
+                            "Open Sans"
+                    ],
+                    "headline-lg": [
+                            "Montserrat"
+                    ],
+                    "headline-xl": [
+                            "Montserrat"
+                    ],
+                    "label-caps": [
+                            "Montserrat"
+                    ]
+            },
+            "fontSize": {
+                    "caption": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "300"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+
+<style>
+/* Glassmorphism Card Style */
+.card {
+  box-sizing: border-box;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  width: 100%;
+  min-height: 254px;
+}
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/* Hand Loading Animation */
+.hand-loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.hand-loader-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.🤚 { 
+  --skin-color: #E4C560; 
+  --tap-speed: 0.6s; 
+  --tap-stagger: 0.1s; 
+  position: relative; 
+  width: 80px; 
+  height: 60px; 
+}
+.🤚:before { 
+  content: ''; display: block; width: 180%; height: 75%; 
+  position: absolute; top: 70%; right: 20%; 
+  background-color: black; border-radius: 40px 10px; 
+  filter: blur(10px); opacity: 0.3; 
+}
+.🌴 { 
+  display: block; width: 100%; height: 100%; 
+  position: absolute; top: 0; left: 0; 
+  background-color: var(--skin-color); border-radius: 10px 40px; 
+}
+.👍 { 
+  position: absolute; width: 120%; height: 38px; 
+  background-color: var(--skin-color); bottom: -18%; right: 1%; 
+  transform-origin: calc(100% - 20px) 20px; transform: rotate(-20deg); 
+  border-radius: 30px 20px 20px 10px; 
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); 
+  border-left: 2px solid rgba(0, 0, 0, 0.1); 
+}
+.👍:after { 
+  width: 20%; height: 60%; content: ''; 
+  background-color: rgba(255, 255, 255, 0.3); position: absolute; 
+  bottom: -8%; left: 5px; border-radius: 60% 10% 10% 30%; 
+  border-right: 2px solid rgba(0, 0, 0, 0.05); 
+}
+.👉 { 
+  position: absolute; width: 80%; height: 35px; 
+  background-color: var(--skin-color); bottom: 32%; right: 64%; 
+  transform-origin: 100% 20px; animation-duration: calc(var(--tap-speed) * 2); 
+  animation-timing-function: ease-in-out; animation-iteration-count: infinite; 
+  transform: rotate(10deg); 
+}
+.👉:before { 
+  content: ''; position: absolute; width: 140%; height: 30px; 
+  background-color: var(--skin-color); bottom: 8%; right: 65%; 
+  transform-origin: calc(100% - 20px) 20px; transform: rotate(-60deg); 
+  border-radius: 20px; 
+}
+.👉:nth-child(1) { animation-delay: 0; filter: brightness(70%); animation-name: tap-upper-1; }
+.👉:nth-child(2) { animation-delay: var(--tap-stagger); filter: brightness(80%); animation-name: tap-upper-2; }
+.👉:nth-child(3) { animation-delay: calc(var(--tap-stagger) * 2); filter: brightness(90%); animation-name: tap-upper-3; }
+.👉:nth-child(4) { animation-delay: calc(var(--tap-stagger) * 3); filter: brightness(100%); animation-name: tap-upper-4; }
+@keyframes tap-upper-1 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.4); } 40% { transform: rotate(50deg) scale(0.4); } }
+@keyframes tap-upper-2 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.6); } 40% { transform: rotate(50deg) scale(0.6); } }
+@keyframes tap-upper-3 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.8); } 40% { transform: rotate(50deg) scale(0.8); } }
+@keyframes tap-upper-4 { 0%, 50%, 100% { transform: rotate(10deg) scale(1); } 40% { transform: rotate(50deg) scale(1); } }
+</style>
+
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-[72px] overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full border-b border-[#1C1C1E] z-50">
+<div class="flex justify-between items-center h-[72px] px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<!-- Brand -->
+<a class="flex items-center" href="index-en.html">
+  <img src="./assets/img/logos/LogoHedder.png" alt="ECUAPLAC Logo" class="h-8 md:h-10 w-auto object-contain select-none" loading="lazy">
+</a>
+<!-- Desktop Nav -->
+<ul class="hidden lg:flex items-center gap-8 uppercase font-semibold text-[13px] tracking-[0.18em]">
+<li><a id="nav-proyectos" class="nav-link pb-1 transition-all duration-300 cursor-pointer" href="#hero-scroll-container">HOME</a></li>
+<li><a id="nav-reformas" class="nav-link pb-1 transition-all duration-300 cursor-pointer" href="#reformas">REMODELS</a></li>
+<li><a id="nav-servicios" class="nav-link pb-1 transition-all duration-300 cursor-pointer" href="#servicios">SERVICES</a></li>
+<li><a id="nav-contacto" class="nav-link pb-1 transition-all duration-300 cursor-pointer" href="#contacto">CONTACT</a></li>
+<li class="flex items-center gap-4 border-l lang-separator pl-8 ml-2">
+  <div class="flex items-center gap-3">
+    <a href="index.html" class="lang-inactive transition-all duration-300">ES</a>
+    <span class="lang-active cursor-default">EN</span>
+  </div>
+</li>
+</ul>
+<!-- Trailing Action -->
+<div class="hidden lg:block">
+<a class="uppercase font-bold text-[11px] tracking-[0.2em] text-white border border-white/40 rounded-full px-6 py-2.5 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 cursor-pointer active:scale-95 shadow-sm hover:shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:-translate-y-0.5 inline-block" onclick="openPresupuestoModal()">QUOTE</a>
+</div>
+<!-- Mobile Menu Icon (Functional) -->
+<div class="lg:hidden flex items-center cursor-pointer" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-white">menu</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Pinned Hero Section with Scroll-Triggered Collage Animation -->
+<section id="hero-scroll-container" class="relative w-full h-[450dvh] bg-black">
+  <div id="hero-sticky-element" class="sticky top-[72px] w-full h-[calc(100dvh-72px)] overflow-hidden">
+    <!-- Image Layers -->
+    <!-- Image 1: Villa Minimalista (Actual) -->
+    <div id="hero-layer-1" class="absolute inset-0 z-0 opacity-100">
+      <img alt="Villa minimalista de lujo en Palma de Mallorca" class="w-full h-full object-cover object-center" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1920&auto=format&fit=crop">
+    </div>
+    <!-- Image 2: Cocina de diseño de alta gama -->
+    <div id="hero-layer-2" class="absolute inset-0 z-0 opacity-0">
+      <img alt="Cocina de alta gama a medida" class="w-full h-full object-cover object-center" loading="lazy" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1920&auto=format&fit=crop">
+    </div>
+    <!-- Image 3: Resultado Final Reforma Integral -->
+    <div id="hero-layer-3" class="absolute inset-0 z-0 opacity-0">
+      <img alt="Resultado Final de Reforma Integral Ecuaplac" class="w-full h-full object-cover object-center" loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1920&auto=format&fit=crop">
+    </div>
+    
+    <!-- Subtle gradient to ensure text readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent z-10"></div>
+    
+    <!-- Hero Text Overlays (Scrollytelling Content) -->
+    <div class="absolute inset-x-0 bottom-0 z-20 h-full max-w-5xl mx-auto pointer-events-none">
+      
+      <!-- Stage 1 Content -->
+      <div id="hero-text-1" class="absolute bottom-2 md:bottom-2 left-5 right-5 md:left-12 md:right-12 transition-all duration-500 transform translate-y-0 opacity-100 pointer-events-auto">
+        <h1 class="font-headline-xl text-headline-xl md:text-[44px] lg:text-[56px] leading-tight text-monolith-white max-w-3xl">
+          Architecture of<br>clean spaces.
+        </h1>
+        <p class="font-body-lg text-body-lg text-monolith-white/80 mt-unit max-w-xl">
+          Complete remodels that redefine light and structure.
+        </p>
+      </div>
+
+      <!-- Stage 2 Content (Clean view) -->
+      <div id="hero-text-2" class="absolute bottom-2 md:bottom-2 left-5 right-5 md:left-12 md:right-12 transition-all duration-500 transform translate-y-4 opacity-0 pointer-events-none"></div>
+
+      <!-- Stage 3 Content -->
+      <div id="hero-text-3" class="absolute bottom-2 md:bottom-2 left-5 right-5 md:left-12 md:right-12 transition-all duration-500 transform translate-y-4 opacity-0 pointer-events-none">
+        <h1 class="font-headline-xl text-headline-xl md:text-[44px] lg:text-[56px] leading-tight text-monolith-white max-w-3xl">
+          The result you<br>always envisioned.
+        </h1>
+        <p class="font-body-lg text-body-lg text-monolith-white/80 mt-unit max-w-xl">
+          Premium finishes in polished microcement, integrated woodwork, and absolute comfort.
+        </p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- Separator Section with Animated Text -->
+<div class="py-12 bg-[#161413] border-t border-b border-white/5 overflow-hidden">
+  <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop flex justify-center items-center">
+    <div id="separator-text" class="font-['Montserrat'] flex flex-row flex-wrap justify-center items-center text-white/90 uppercase transition-all duration-[1200ms] ease-out opacity-0 -translate-x-24 gap-3 md:gap-5">
+      <span class="text-sm md:text-lg font-bold tracking-[0.25em] pt-1">MORE HOME REMODELS</span>
+      <img src="./assets/img/logos/LogoHedder.png" alt="ECUAPLAC Logo" class="h-8 md:h-12 w-auto object-contain select-none ecuaplac-animated-logo" loading="lazy">
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio Card Carousel -->
+<section id="proyectos" class="pt-12 pb-24 scroll-mt-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+
+  <div class="relative overflow-hidden" id="portfolio-carousel">
+
+    <div id="carousel-track" class="flex gap-6 transition-transform duration-500 ease-in-out">
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2131.jpg" alt="Designer bathroom with freestanding bathtub" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Andratx</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Designer Bathroom with Freestanding Bathtub</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2135.jpg" alt="Sculptural helical staircase in polished plaster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Calvià</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Sculptural Helical Staircase</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2134.jpg" alt="Custom shower with illuminated niches" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Sóller</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Custom Shower with Illuminated Niches</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2119.jpg" alt="Integrated minimalist modern kitchen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Palma de Mallorca</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Integrated Minimalist Modern Kitchen</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2129.jpg" alt="Outdoor terrace and solarium" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Santanyí</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Outdoor Terrace &amp; Solarium</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2132.jpg" alt="Minimalist guest toilet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Marratxí</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Minimalist Guest Toilet</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2133.jpg" alt="Corridor with indirect lighting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Palma de Mallorca</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Corridor with Indirect Lighting</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2136.jpg" alt="Illuminated display niche" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Palma de Mallorca</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Illuminated Display Niche</h3>
+        </div>
+      </div>
+
+      <div class="carousel-card card flex-none w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group cursor-pointer overflow-hidden p-3 md:p-4">
+        <div class="w-full aspect-[4/3] bg-surface-container overflow-hidden rounded-xl">
+          <img src="./assets/img/portfolio/IMG_2138.jpg" alt="Helical staircase detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+        </div>
+        <div class="mt-4 flex flex-col px-1">
+          <span class="font-label-caps text-label-caps uppercase text-mortar-grey mb-1">Calvià</span>
+          <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors duration-300 group-hover:text-[#1E4E7C] dark:group-hover:text-[#4A90E2]">Helical Staircase Detail</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="carousel-prev" aria-label="Previous" class="absolute -left-4 md:-left-6 top-[40%] -translate-y-1/2 z-40 w-16 h-16 flex items-center justify-center rounded-full bg-white dark:bg-[#161413] border border-black/10 dark:border-white/10 shadow-md text-primary hover:bg-primary hover:text-white active:scale-95 transition-all duration-200">
+      <span class="material-symbols-outlined text-xl">chevron_left</span>
+    </button>
+    <button id="carousel-next" aria-label="Next" class="absolute -right-4 md:-right-6 top-[40%] -translate-y-1/2 z-40 w-16 h-16 flex items-center justify-center rounded-full bg-white dark:bg-[#161413] border border-black/10 dark:border-white/10 shadow-md text-primary hover:bg-primary hover:text-white active:scale-95 transition-all duration-200">
+      <span class="material-symbols-outlined text-xl">chevron_right</span>
+    </button>
+
+  </div>
+
+  <div id="carousel-dots" class="flex justify-center gap-2 mt-8"></div>
+
+  <script>
+  (function() {
+    const track=document.getElementById('carousel-track'),cards=Array.from(track.querySelectorAll('.carousel-card card')),dotsEl=document.getElementById('carousel-dots'),prevBtn=document.getElementById('carousel-prev'),nextBtn=document.getElementById('carousel-next'),total=cards.length;
+    let current=0,timer,perView=3;
+    function getPerView(){const w=window.innerWidth;if(w<640)return 1;if(w<1024)return 2;return 3;}
+    function cardWidth(){return cards[0].getBoundingClientRect().width+24;}
+    function maxIndex(){return Math.max(0,total-perView);}
+    function buildDots(){dotsEl.innerHTML='';const pages=maxIndex()+1;for(let i=0;i<pages;i++){const d=document.createElement('button');d.className='w-2 h-2 rounded-full transition-all duration-300 '+(i===0?'bg-primary scale-125':'bg-primary/25');d.setAttribute('aria-label','Page '+(i+1));d.addEventListener('click',()=>goTo(i));dotsEl.appendChild(d);}}
+    function updateDots(){dotsEl.querySelectorAll('button').forEach((d,i)=>{d.className='w-2 h-2 rounded-full transition-all duration-300 '+(i===current?'bg-primary scale-125':'bg-primary/25');});}
+    function goTo(n){perView=getPerView();current=Math.max(0,Math.min(n,maxIndex()));track.style.transform='translateX(-'+(current*cardWidth())+'px)';updateDots();}
+    function next(){goTo(current+1>maxIndex()?0:current+1);}
+    function prev(){goTo(current-1<0?maxIndex():current-1);}
+    nextBtn.addEventListener('click',()=>{next();resetTimer();});
+    prevBtn.addEventListener('click',()=>{prev();resetTimer();});
+    let startX=0;
+    track.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;},{passive:true});
+    track.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>40){dx<0?next():prev();resetTimer();}},{passive:true});
+    function startTimer(){timer=setInterval(next,4000);}
+    function resetTimer(){clearInterval(timer);startTimer();}
+    const wrapper=document.getElementById('portfolio-carousel');
+    wrapper.addEventListener('mouseenter',()=>clearInterval(timer));
+    wrapper.addEventListener('mouseleave',startTimer);
+    window.addEventListener('resize',()=>{perView=getPerView();buildDots();goTo(0);});
+    perView=getPerView();buildDots();startTimer();
+  })();
+  </script>
+
+</section>
+
+
+</section>
+
+<!-- Real Transformations (Stacked Layout) -->
+<div class="ecuador-divider"></div>
+<section id="reformas" class="py-24 bg-surface-container-lowest scroll-mt-20">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 border-b border-primary pb-4">
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-primary">Real Transformations</h2>
+</div>
+<!-- Interactive Slider (Replaces Stack Item 1) -->
+<div class="w-full max-w-5xl mx-auto mb-24 bg-white dark:bg-[#161413] border border-black/5 dark:border-white/5 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)] transition-all duration-500 p-4 md:p-8">
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 md:mb-8 gap-4">
+    <div class="max-w-2xl">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-primary block mb-2">Success Story / Custom Dressing Room</span>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">
+        Space optimization and custom furniture design with integrated LED lighting, creating a sophisticated and functional dressing room.
+      </p>
+    </div>
+    <!-- Interactive Hint Badge -->
+    <div class="flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full border border-primary/20 animate-pulse shrink-0">
+      <span class="material-symbols-outlined text-sm">swipe</span>
+      <span class="font-label-caps text-[10px] md:text-xs tracking-widest uppercase font-bold">Slide to compare</span>
+    </div>
+  </div>
+
+  <!-- Slider Container -->
+  <div id="before-after-slider" class="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden bg-black select-none group rounded-xl shadow-inner border border-black/10 dark:border-white/10">
+    
+    <!-- After Image (Base Layer) -->
+    <img src="./assets/img/portfolio/despues3.jpg" alt="Finished dressing room illuminated with LEDs with premium finishes" loading="lazy" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+    
+    <!-- Label After -->
+    <div id="label-after" class="absolute top-4 right-4 md:top-6 md:right-6 bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 md:px-4 md:py-2 rounded-md text-white font-label-caps text-[10px] md:text-xs tracking-[0.2em] uppercase opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
+      FINAL RESULT
+    </div>
+
+    <!-- Before Image (Clipped Layer) -->
+    <div id="slider-before-clip" class="absolute inset-0 w-1/2 overflow-hidden border-r-[2px] border-white/90 shadow-[0_0_15px_rgba(0,0,0,0.5)] z-20">
+      <img src="./assets/img/portfolio/antes3.jpg" alt="Drywall dressing room structure in construction phase" loading="lazy" class="absolute inset-0 w-full h-full object-cover pointer-events-none" id="before-img-el">
+      <!-- Label Before -->
+      <div id="label-before" class="absolute top-4 left-4 md:top-6 md:left-6 bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 md:px-4 md:py-2 rounded-md text-white font-label-caps text-[10px] md:text-xs tracking-[0.2em] uppercase opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
+        INITIAL STATE
+      </div>
+    </div>
+
+    <!-- Slider Handle Bar -->
+    <div id="slider-bar-handle" class="absolute inset-y-0 left-1/2 w-[2px] bg-white shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-500 cursor-ew-resize z-30 flex items-center justify-center pointer-events-none">
+      <div class="relative w-14 h-14 bg-white rounded-full shadow-2xl flex items-center justify-center text-primary transition-all duration-500 group-hover:scale-105 border-4 border-white/80">
+        <span class="material-symbols-outlined text-2xl font-bold">code</span>
+        <!-- Pulsating rings to indicate interaction -->
+        <div class="absolute inset-0 rounded-full border-2 border-white animate-ping opacity-70"></div>
+      </div>
+    </div>
+    
+    <!-- Interaction overlay layer -->
+    <div class="absolute inset-0 z-40 cursor-ew-resize" id="slider-interaction-overlay"></div>
+  </div>
+</div>
+<!-- View All Button -->
+<div class="flex justify-center mt-12">
+<a class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-primary border border-primary/40 rounded-full px-10 py-3.5 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-300" href="reformas-en.html" onclick="handleVerMasProyectos(event)">VIEW MORE PROJECTS</a>
+</div>
+</div>
+</section>
+
+<!-- Servicios Section -->
+<div class="ecuador-divider"></div>
+<section id="servicios" class="py-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto scroll-mt-20">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+    <!-- Section Title & Intro (Left) -->
+    <div class="md:col-span-4 flex flex-col justify-start">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey mb-4">Our Expertise</span>
+      <h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-primary leading-tight">
+        Construction<br>Solutions.
+      </h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mt-6 pr-4">
+        We approach each project with millimeter precision and a devotion to technical quality, ensuring flawless finishes.
+      </p>
+    </div>
+    
+    <!-- Services List (Right) -->
+    <div class="md:col-span-8 divide-y divide-outline-variant mt-12 md:mt-0">
+      <!-- Service Item 1 -->
+      <div class="py-8 first:pt-0 last:pb-0 group cursor-pointer">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-2">01 / DESIGN & PLANNING</span>
+        <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors group-hover:text-secondary">"Turnkey" Complete Remodeling</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+          Absolute project management: from initial demolition and space design to the final execution of finishes, delivering the home completely ready to live in.
+        </p>
+      </div>
+      <!-- Service Item 2 -->
+      <div class="py-8 first:pt-0 last:pb-0 group cursor-pointer">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-2">02 / TECHNICAL EXPERTISE</span>
+        <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors group-hover:text-secondary">Insulation and Drywall Systems</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+          Experts with over 20 years of experience in acoustic, thermal, and fireproof systems for homes, industrial buildings, and music rooms with high sound requirements.
+        </p>
+      </div>
+      <!-- Service Item 3 -->
+      <div class="py-8 first:pt-0 last:pb-0 group cursor-pointer">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-2">03 / HIGH-END DECOR & CLADDING</span>
+        <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors group-hover:text-secondary">Microcement, Plaster, and Painting</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+          Application of modern continuous coatings, high-precision plaster finishes, and professional painting to achieve polished, minimalist, and durable surfaces.
+        </p>
+      </div>
+      <!-- Service Item 4 -->
+      <div class="py-8 first:pt-0 last:pb-0 group cursor-pointer">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-2">04 / INSTALLATIONS & COMFORT</span>
+        <h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary transition-colors group-hover:text-secondary">HVAC, Tiling, and Paving</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+          Thermal optimization and space conditioning, complemented by meticulous high-quality paving and ceramic tiling works.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contacto Section -->
+<div class="ecuador-divider"></div>
+<section id="contacto" class="py-24 bg-[#F4EFE6] scroll-mt-20">
+  <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <!-- Contact Info (Left) -->
+      <div class="md:col-span-4 flex flex-col justify-start">
+        <span class="font-label-caps text-sm md:text-base font-bold uppercase tracking-widest text-primary mb-2 block">SHALL WE DISCUSS YOUR SPACE?</span>
+        <h2 class="font-headline-xl text-[3rem] md:text-[4rem] text-primary leading-none mb-12 font-light tracking-tight">
+          Contact.
+        </h2>
+        
+        <div class="flex flex-col gap-10 font-body-md text-on-surface-variant">
+          <div>
+            <span class="font-label-caps text-[11px] uppercase tracking-widest text-primary block mb-2 font-bold">PROJECT MANAGEMENT</span>
+            <p class="text-lg text-primary">Palma de Mallorca, Balearic Islands</p>
+          </div>
+          <div class="w-full">
+            <span class="font-label-caps text-[11px] uppercase tracking-widest text-primary block mb-4 font-bold">CUSTOMER SERVICE</span>
+            <a href="https://wa.me/34678159878?text=Hello%2C%20Ecuaplac%20team.%20I%20am%20interested%20in%20a%20project%20and%20would%20like%20to%20receive%20more%20information." 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center w-full md:w-max bg-[#25D366] text-monolith-white px-8 py-3.5 text-sm rounded-full font-bold transition-all duration-300 hover:bg-[#128C7E] hover:-translate-y-1 hover:shadow-lg active:scale-95 group">
+              <svg class="w-5 h-5 mr-3 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.437-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Contact via WhatsApp
+            </a>
+          </div>
+          <div>
+            <span class="font-label-caps text-[11px] uppercase tracking-widest text-primary block mb-3 font-bold">ABOUT US</span>
+            <div class="p-6 -[#E5E7EB] card !p-6">
+              <p class="m-0 text-on-surface-variant leading-relaxed text-[15px]">Specialists in Drywall, Technical Insulation, and High-End Complete Remodels with over 20 years of experience in the Balearic Islands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form (Right) -->
+      <div class="md:col-span-8 mt-12 md:mt-0 bg-white p-8 md:p-12 border border-[#E5E7EB] rounded-[16px] shadow-[0_8px_32px_rgba(0,0,0,0.04)]">
+        <form id="contactForm" onsubmit="event.preventDefault(); handleFormSubmit('contactForm');" class="flex flex-col gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Nombre -->
+            <div class="relative">
+              <label for="c_nombre" class="font-label-caps text-[11px] font-bold uppercase tracking-widest text-primary block mb-2.5">Full Name</label>
+              <input type="text" name="c_nombre" id="c_nombre" required class="bg-[#F9FAFB] border border-[#E5E7EB] rounded-[8px] px-4 py-3.5 w-full text-primary placeholder-mortar-grey/50 hover:bg-white hover:border-[#D1D5DB] hover:shadow-sm focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all duration-300 font-body-md" placeholder="e.g. John Doe">
+            </div>
+            <!-- Email -->
+            <div class="relative">
+              <label for="c_email" class="font-label-caps text-[11px] font-bold uppercase tracking-widest text-primary block mb-2.5">Email Address</label>
+              <input type="email" name="c_email" id="c_email" required class="bg-[#F9FAFB] border border-[#E5E7EB] rounded-[8px] px-4 py-3.5 w-full text-primary placeholder-mortar-grey/50 hover:bg-white hover:border-[#D1D5DB] hover:shadow-sm focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all duration-300 font-body-md" placeholder="contact@example.com">
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contact Phone -->
+            <div class="relative">
+              <label for="c_telefono" class="font-label-caps text-[11px] font-bold uppercase tracking-widest text-primary block mb-2.5">Contact Phone</label>
+              <input type="tel" name="c_telefono" id="c_telefono" class="bg-[#F9FAFB] border border-[#E5E7EB] rounded-[8px] px-4 py-3.5 w-full text-primary placeholder-mortar-grey/50 hover:bg-white hover:border-[#D1D5DB] hover:shadow-sm focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all duration-300 font-body-md" placeholder="e.g. +34 678 15 98 78">
+            </div>
+            <!-- Asunto -->
+            <div class="relative">
+              <label for="c_asunto" class="font-label-caps text-[11px] font-bold uppercase tracking-widest text-primary block mb-2.5">Subject</label>
+              <input type="text" name="c_asunto" id="c_asunto" required class="bg-[#F9FAFB] border border-[#E5E7EB] rounded-[8px] px-4 py-3.5 w-full text-primary placeholder-mortar-grey/50 hover:bg-white hover:border-[#D1D5DB] hover:shadow-sm focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all duration-300 font-body-md" placeholder="e.g. Complete Remodel in Son Vida or Technical Insulation">
+            </div>
+          </div>
+          
+          <!-- Mensaje -->
+          <div class="relative">
+            <label for="c_mensaje" class="font-label-caps text-[11px] font-bold uppercase tracking-widest text-primary block mb-2.5">Message</label>
+            <textarea name="c_mensaje" id="c_mensaje" required rows="5" class="bg-[#F9FAFB] border border-[#E5E7EB] rounded-[8px] px-4 py-3.5 w-full text-primary placeholder-mortar-grey/50 hover:bg-white hover:border-[#D1D5DB] hover:shadow-sm focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all duration-300 font-body-md resize-none" placeholder="Briefly describe the dimensions of the space, the type of technical intervention or remodel required, and estimated timelines..."></textarea>
+          </div>
+          
+          <!-- Submit -->
+          <div class="flex justify-end mt-2">
+            <button type="submit" class="inline-flex items-center justify-center w-full md:w-max bg-primary text-monolith-white px-12 py-4 text-[12px] rounded-full font-bold uppercase tracking-widest transition-all duration-300 hover:bg-secondary hover:-translate-y-1 hover:shadow-xl active:scale-95">
+              SEND MESSAGE
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+ 
+<!-- Footer -->
+<footer class="w-full bg-[#141414] text-[#A3A3A3] pt-20 pb-10 border-t border-[#1C1C1E] transition-colors duration-300">
+  <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+    <!-- 3 Column Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 pb-16 border-b border-[#1C1C1E]">
+      
+      <!-- Left Column: Navigation -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left justify-center">
+        <h4 class="font-label-caps text-[11px] uppercase text-monolith-white tracking-[0.2em] mb-8 font-bold relative inline-block">
+          Navigation
+          <span class="absolute -bottom-2 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 w-8 h-[2px] bg-secondary"></span>
+        </h4>
+        <ul class="flex flex-col gap-3 font-body-md w-full">
+          <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="#hero-scroll-container">Home</a></li>
+          <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index-en.html#reformas">Renovations</a></li>
+          <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index-en.html#servicios">Services</a></li>
+          <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index-en.html#contacto">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Center Column: Logo & Description -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <div class="bg-white p-3 inline-flex items-center justify-center rounded-full border-[3px] border-[#FFB81C] shadow-lg w-32 h-32 mb-8 overflow-hidden transition-transform duration-500 hover:scale-105">
+          <img src="./assets/img/logos/Logofotter.jpg" alt="ECUAPLAC Logo" class="w-full h-full object-contain" loading="lazy">
+        </div>
+        <p class="text-[15px] text-[#888] leading-relaxed max-w-sm">
+          Born in Mallorca, forged on site. G &amp; J transform every space with artisanal precision and luxury finishes.
+        </p>
+      </div>
+
+      <!-- Right Column: Legal & Social -->
+      <div class="flex flex-col items-center md:items-end text-center md:text-right justify-center">
+        <div class="mb-10 w-full flex flex-col items-center md:items-end">
+          <h4 class="font-label-caps text-[11px] uppercase text-monolith-white tracking-[0.2em] mb-8 font-bold relative inline-block">
+            Legal
+            <span class="absolute -bottom-2 left-1/2 md:left-auto md:right-0 -translate-x-1/2 md:translate-x-0 w-8 h-[2px] bg-secondary"></span>
+          </h4>
+          <ul class="flex flex-col gap-3 font-body-md w-full">
+            <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Legal Notice</a></li>
+            <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Cookie Policy</a></li>
+            <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        
+        <!-- Instagram -->
+        <a class="group flex items-center justify-center gap-4 text-[13px] font-label-caps tracking-widest text-[#888] hover:text-monolith-white transition-all duration-300 h-11 px-2" href="https://www.instagram.com/ecuaplac.jyg?igsh=MTJ6d2I3cDFnempyZg==" target="_blank" rel="noopener noreferrer">
+          INSTAGRAM
+          <span class="w-10 h-10 flex items-center justify-center rounded-full border border-[#444] group-hover:border-monolith-white group-hover:bg-monolith-white group-hover:text-primary transition-all duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+      
+    </div>
+
+    <!-- Bottom Bar: Full Width Credits -->
+    <div class="pt-10 flex flex-col items-center justify-center w-full">
+      <a href="https://mynextbymusa.com" target="_blank" rel="noopener noreferrer" class="font-label-caps text-[14px] md:text-[16px] text-monolith-white tracking-[0.3em] uppercase font-extrabold hover:text-secondary hover:tracking-[0.4em] transition-all duration-500 py-4 px-8 inline-flex items-center justify-center h-14">
+        MADE BY MYNEXT
+      </a>
+      <span class="text-[12px] text-[#555] mt-6 font-body-md tracking-wider uppercase">
+        © 2026 ECUAPLAC. ALL RIGHTS RESERVED.
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- Presupuesto Modal -->
+<div id="presupuestoModal" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 ease-out flex items-center justify-center p-4">
+  <!-- Backdrop Blur overlay -->
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-sm cursor-pointer" onclick="closePresupuestoModal()"></div>
+  
+  <!-- Modal Content Container -->
+  <div class="relative w-full max-w-2xl bg-surface-container-lowest border border-outline-variant p-8 md:p-12 z-10 transition-transform duration-300 transform scale-95 shadow-xl max-h-[90dvh] overflow-y-auto">
+    <!-- Close Button -->
+    <button class="absolute top-6 right-6 text-primary hover:text-secondary cursor-pointer w-12 h-12 flex items-center justify-center" onclick="closePresupuestoModal()">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    
+    <div class="mb-8">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-2">No-obligation Quote</span>
+      <h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-primary leading-tight">
+        Request a Quote.
+      </h2>
+      <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Provide us with some preliminary details of your project and our technical team will conduct an initial feasibility study.
+      </p>
+    </div>
+    
+    <form id="presupuestoForm" onsubmit="event.preventDefault(); handleFormSubmit('presupuestoForm');">
+      <div class="flex flex-col gap-6">
+        <!-- Client Details Row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="p_nombre" class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-1">Full Name</label>
+            <input type="text" name="p_nombre" id="p_nombre" required class="border-b border-outline-variant focus:border-primary bg-transparent py-2 w-full text-on-surface placeholder-mortar-grey/50 focus:outline-none transition-colors duration-300 font-body-md" placeholder="E.g. Charles Martin">
+          </div>
+          <div>
+            <label for="p_email" class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-1">Email Address</label>
+            <input type="email" name="p_email" id="p_email" required class="border-b border-outline-variant focus:border-primary bg-transparent py-2 w-full text-on-surface placeholder-mortar-grey/50 focus:outline-none transition-colors duration-300 font-body-md" placeholder="E.g. charles@company.com">
+          </div>
+        </div>
+        
+        <!-- Project Details Row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="p_tipo" class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-1">Project Type</label>
+            <select name="p_tipo" id="p_tipo" required class="border-b border-outline-variant focus:border-primary bg-transparent py-2 w-full text-on-surface focus:outline-none transition-colors duration-300 font-body-md cursor-pointer rounded-none">
+              <option value="" disabled selected>Select an option</option>
+              <option value="Reforma Integral">Complete Home Remodel</option>
+              <option value="Cocina / Baño">Kitchen or Bathroom Remodel</option>
+              <option value="New Construction">New Construction</option>
+              <option value="Diseño de Interiores">Interior Design & Decoration</option>
+              <option value="Otros">Other Works / Commercial Spaces</option>
+            </select>
+          </div>
+          <div>
+            <label for="p_metros" class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-1">Approx. Dimensions (m²)</label>
+            <input type="number" name="p_metros" id="p_metros" required min="1" class="border-b border-outline-variant focus:border-primary bg-transparent py-2 w-full text-on-surface placeholder-mortar-grey/50 focus:outline-none transition-colors duration-300 font-body-md" placeholder="E.g. 120">
+          </div>
+        </div>
+        
+        <!-- Budget & Location -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="p_presupuesto" class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-1">Estimated Budget (€)</label>
+            <select name="p_presupuesto" id="p_presupuesto" required class="border-b border-outline-variant focus:border-primary bg-transparent py-2 w-full text-on-surface focus:outline-none transition-colors duration-300 font-body-md cursor-pointer rounded-none">
+              <option value="" disabled selected>Budget range</option>
+              <option value="< 25k">Under 25,000 €</option>
+              <option value="25k - 75k">25.000 € - 75.000 €</option>
+              <option value="75k - 150k">75.000 € - 150.000 €</option>
+              <option value="> 150k">Over 150,000 €</option>
+            </select>
+          </div>
+          <div>
+            <label for="p_ubicacion" class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-1">Project Location</label>
+            <input type="text" name="p_ubicacion" id="p_ubicacion" required class="border-b border-outline-variant focus:border-primary bg-transparent py-2 w-full text-on-surface placeholder-mortar-grey/50 focus:outline-none transition-colors duration-300 font-body-md" placeholder="E.g. Palma de Mallorca (Center)">
+          </div>
+        </div>
+        
+        <!-- Description -->
+        <div>
+          <label for="p_descripcion" class="font-label-caps text-label-caps uppercase tracking-widest text-mortar-grey block mb-1">Specific Details or Requirements</label>
+          <textarea name="p_descripcion" id="p_descripcion" rows="3" class="border-b border-outline-variant focus:border-primary bg-transparent py-2 w-full text-on-surface placeholder-mortar-grey/50 focus:outline-none transition-colors duration-300 font-body-md resize-none" placeholder="Indicate specifications regarding layout, materials, timeframes, or other details..."></textarea>
+        </div>
+        
+        <!-- Button Row -->
+        <div class="flex justify-end mt-4">
+          <button type="submit" class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-primary border border-primary/40 rounded-full px-10 py-3.5 bg-transparent hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer">
+            SEND REQUEST
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenu" class="fixed inset-0 z-50 bg-surface dark:bg-on-background invisible opacity-0 transition-all duration-300 ease-in-out flex flex-col justify-between p-8">
+  <!-- Top Bar inside Mobile Menu -->
+  <div class="flex justify-between items-center h-20">
+    <a class="flex items-center" href="index-en.html" onclick="toggleMobileMenu()">
+      <img src="./assets/img/logos/LogoHedder.png" alt="ECUAPLAC Logo" class="h-10 w-auto object-contain select-none" loading="lazy">
+    </a>
+    <button class="text-primary dark:text-monolith-white cursor-pointer" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+  </div>
+  
+  <!-- Navigation Links -->
+  <ul class="flex flex-col gap-8 font-headline-xl text-3xl uppercase tracking-wider text-center mt-12">
+    <li><a class="text-primary dark:text-monolith-white hover:text-secondary block py-2 transition-colors" href="#hero-scroll-container" onclick="toggleMobileMenu()">HOME</a></li>
+    <li><a class="text-primary dark:text-monolith-white hover:text-secondary block py-2 transition-colors" href="#reformas" onclick="toggleMobileMenu()">REMODELS</a></li>
+    <li><a class="text-primary dark:text-monolith-white hover:text-secondary block py-2 transition-colors" href="#servicios" onclick="toggleMobileMenu()">SERVICES</a></li>
+    <li><a class="text-primary dark:text-monolith-white hover:text-secondary block py-2 transition-colors" href="#contacto" onclick="toggleMobileMenu()">CONTACT</a></li>
+  </ul>
+  
+  <!-- Trailing Budget Button & Socials -->
+  <div class="flex flex-col gap-8 items-center mb-12">
+    <!-- Language Selector Mobile -->
+    <div class="flex justify-center items-center gap-6 font-label-caps tracking-widest font-bold text-[16px]">
+      <a href="index.html" class="text-mortar-grey hover:text-primary dark:hover:text-monolith-white transition-colors cursor-pointer pb-1">ES</a>
+      <span class="text-primary dark:text-monolith-white cursor-default border-b-2 border-primary dark:border-monolith-white pb-1">EN</span>
+    </div>
+    <button onclick="toggleMobileMenu(); openPresupuestoModal();" class="w-full font-bold uppercase tracking-widest text-[12px] text-primary border border-primary/40 rounded-full px-6 py-3.5 hover:bg-primary hover:text-white active:scale-95 transition-all duration-300 cursor-pointer text-center">
+      REQUEST A QUOTE
+    </button>
+  </div>
+</div>
+
+<!-- Minimalist Vertical Scroll Pagination Indicator -->
+<div id="vertical-pagination" class="fixed right-5 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-6 transition-all duration-300 dark-bg">
+  <button class="pagination-dot group active" data-slide="0" aria-label="Imagen 1">
+    <span class="pagination-tooltip">Home</span>
+  </button>
+  <button class="pagination-dot group" data-slide="1" aria-label="Imagen 2">
+    <span class="pagination-tooltip">Kitchen</span>
+  </button>
+  <button class="pagination-dot group" data-slide="2" aria-label="Imagen 3">
+    <span class="pagination-tooltip">Result</span>
+  </button>
+</div>
+
+<script>
+  // Mobile Menu state toggle
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu.classList.contains('invisible')) {
+      menu.classList.remove('invisible', 'opacity-0');
+      menu.classList.add('visible', 'opacity-100');
+      document.body.style.overflow = 'hidden'; // Lock scrolling
+    } else {
+      menu.classList.remove('visible', 'opacity-100');
+      menu.classList.add('invisible', 'opacity-0');
+      document.body.style.overflow = ''; // Unlock scrolling
+    }
+  }
+
+  // Presupuesto Modal state
+  function openPresupuestoModal() {
+    const modal = document.getElementById('presupuestoModal');
+    modal.classList.remove('invisible', 'opacity-0');
+    modal.classList.add('visible', 'opacity-100');
+    modal.querySelector('.relative').classList.remove('scale-95');
+    modal.querySelector('.relative').classList.add('scale-100');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePresupuestoModal() {
+    const modal = document.getElementById('presupuestoModal');
+    modal.classList.remove('visible', 'opacity-100');
+    modal.classList.add('invisible', 'opacity-0');
+    modal.querySelector('.relative').classList.remove('scale-100');
+    modal.querySelector('.relative').classList.add('scale-95');
+    document.body.style.overflow = '';
+    
+    // Reset form after closing if it was submitted
+    setTimeout(() => {
+      const container = modal.querySelector('.relative');
+      const successDiv = document.getElementById('presupuestoSuccess');
+      if (successDiv) {
+        successDiv.remove();
+        document.getElementById('presupuestoForm').style.display = 'block';
+      }
+    }, 300);
+  }
+
+  // Form submission feedback handler
+  function handleFormSubmit(formId) {
+    const form = document.getElementById(formId);
+    
+    if (formId === 'presupuestoForm') {
+      // Hide form and show premium success card
+      form.style.display = 'none';
+      const container = form.parentElement;
+      
+      const successDiv = document.createElement('div');
+      successDiv.id = 'presupuestoSuccess';
+      successDiv.className = 'flex flex-col items-center justify-center text-center py-16 px-4 animate-fade-in';
+      successDiv.innerHTML = `
+        <span class="material-symbols-outlined text-6xl text-secondary mb-6">task_alt</span>
+        <h3 class="font-headline-lg text-headline-lg text-primary mb-4">Request Received!</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-8">
+          We have received your technical specifications for the project. An architect from our team will analyze the feasibility and contact you within the next 24 hours.
+        </p>
+        <button onclick="closePresupuestoModal()" class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-primary border border-primary/40 rounded-full px-10 py-3 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-md active:scale-95 transition-all duration-300 cursor-pointer">
+          Understood
+        </button>
+      `;
+      container.appendChild(successDiv);
+    } else if (formId === 'contactForm') {
+      // Inline beautiful banner for contact form
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerText;
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Sending...';
+      
+      setTimeout(() => {
+        // Show success state
+        form.reset();
+        submitBtn.innerText = 'Successfully Sent!';
+        submitBtn.className = 'font-label-caps text-label-caps uppercase tracking-widest text-monolith-white border border-secondary bg-secondary px-8 py-4 transition-colors duration-300 cursor-pointer';
+        
+        // Show toast notification
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-8 right-8 z-50 bg-primary text-monolith-white px-6 py-4 shadow-xl border border-outline-variant flex items-center gap-3 animate-slide-up font-body-md';
+        toast.innerHTML = `
+          <span class="material-symbols-outlined text-secondary">mail</span>
+          <span>Message sent. We will reply to you very soon.</span>
+        `;
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+          toast.remove();
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalText;
+          submitBtn.className = 'font-label-caps text-label-caps uppercase tracking-widest text-primary border border-primary px-8 py-4 bg-transparent hover:bg-primary hover:text-monolith-white transition-colors duration-300 cursor-pointer active:opacity-70';
+        }, 4000);
+      }, 1000);
+    }
+  }
+
+  // Active section highlighting & smooth scrolling
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add smooth scrolling to all local anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Add smooth scrolling to pagination dots representing hero collage slides
+    document.querySelectorAll('#vertical-pagination .pagination-dot').forEach(dot => {
+      dot.addEventListener('click', function () {
+        const slideIndex = parseInt(this.getAttribute('data-slide'));
+        const heroContainer = document.getElementById('hero-scroll-container');
+        if (heroContainer) {
+          const heroTop = heroContainer.offsetTop;
+          const containerHeight = heroContainer.getBoundingClientRect().height;
+          const viewportHeight = window.innerHeight;
+          const totalScrollable = containerHeight - viewportHeight;
+          // Map slideIndex to progress 0..0.80 of total scrollable height
+          const numStages = document.querySelectorAll('#vertical-pagination .pagination-dot').length;
+          const step = (numStages > 1) ? (0.80 / (numStages - 1)) : 0;
+          const targetScroll = heroTop + (slideIndex * step * totalScrollable);
+          window.scrollTo({
+            top: targetScroll,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // IntersectionObserver to watch sections and update nav links active state
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px', // Focus mainly on middle screen trigger
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active-nav');
+            } else {
+              link.classList.remove('active-nav');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Scroll listener for dynamic navbar and footer styling
+    const navElement = document.querySelector('nav');
+    const footerElement = document.querySelector('footer');
+
+    // Scrollytelling Pinned Hero Logic
+    const heroContainer = document.getElementById('hero-scroll-container');
+    const layers = [
+      document.getElementById('hero-layer-1'),
+      document.getElementById('hero-layer-2'),
+      document.getElementById('hero-layer-3')
+    ];
+
+    const texts = [
+      document.getElementById('hero-text-1'),
+      document.getElementById('hero-text-2'),
+      document.getElementById('hero-text-3')
+    ];
+
+    function handleHeroScroll() {
+      if (!heroContainer) return;
+      
+      const rect = heroContainer.getBoundingClientRect();
+      const containerHeight = rect.height;
+      const viewportHeight = window.innerHeight;
+      
+      // Calculate scroll progress (0 to 1) for the entire container scrollable area
+      const totalScrollable = containerHeight - viewportHeight;
+      let progress = -rect.top / totalScrollable;
+      progress = Math.min(Math.max(progress, 0), 1);
+      
+      // We want the transitions between the images to finish at 80% of scroll progress.
+      // The remaining 20% acts as a "mini descanso" (static pause) on the last image.
+      let transitionProgress = progress / 0.8;
+      transitionProgress = Math.min(Math.max(transitionProgress, 0), 1);
+      
+      const numStages = layers.length;
+      const numTransitions = numStages - 1;
+      const step = 1 / numTransitions;
+      
+      // Find current transition index based on transitionProgress (0 to 1)
+      let transitionIndex = Math.floor(transitionProgress / step);
+      if (transitionIndex >= numTransitions) {
+        transitionIndex = numTransitions - 1;
+      }
+      
+      // local progress within the current transition (0 to 1)
+      const localProg = (transitionProgress - (transitionIndex * step)) / step;
+      
+      // Set active layers with a clean vertical slide-up parallax transition
+      layers.forEach((layer, idx) => {
+        if (!layer) return;
+        if (idx === transitionIndex) {
+          // Outgoing layer: drifts upward slightly (parallax) and stays active underneath
+          layer.style.transform = `translateY(${-localProg * 25}%)`;
+          layer.style.opacity = '1';
+          layer.style.zIndex = '1';
+        } else if (idx === transitionIndex + 1) {
+          // Incoming layer: slides up from 100% to 0% on top of the outgoing layer
+          layer.style.transform = `translateY(${(1 - localProg) * 100}%)`;
+          layer.style.opacity = '1';
+          layer.style.zIndex = '2';
+        } else if (idx < transitionIndex) {
+          // Passed layers: completely out of view at the top
+          layer.style.transform = 'translateY(-100%)';
+          layer.style.opacity = '0';
+          layer.style.zIndex = '0';
+        } else {
+          // Future layers: waiting below the screen
+          layer.style.transform = 'translateY(100%)';
+          layer.style.opacity = '0';
+          layer.style.zIndex = '0';
+        }
+      });
+
+      // Update right-side vertical pagination dot active states
+      const paginationDots = document.querySelectorAll('#vertical-pagination .pagination-dot');
+      if (paginationDots.length === numStages) {
+        const activeIdx = localProg < 0.5 ? transitionIndex : transitionIndex + 1;
+        paginationDots.forEach((dot, idx) => {
+          if (idx === activeIdx) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+
+      // Optimize text overlay cross-fading
+      texts.forEach((text, idx) => {
+        if (!text) return;
+        if (idx !== transitionIndex && idx !== transitionIndex + 1) {
+          if (text.style.opacity !== '0') {
+            text.style.opacity = '0';
+            text.style.transform = 'translateY(16px)';
+            text.style.pointerEvents = 'none';
+          }
+        }
+      });
+      
+      const fromText = texts[transitionIndex];
+      const toText = texts[transitionIndex + 1];
+      
+      if (localProg < 0.5) {
+        if (fromText) {
+          fromText.style.opacity = 1 - (localProg * 2);
+          fromText.style.transform = `translateY(${-localProg * 16}px)`;
+          fromText.style.pointerEvents = 'auto';
+        }
+        if (toText && toText.style.opacity !== '0') {
+          toText.style.opacity = '0';
+          toText.style.transform = 'translateY(16px)';
+          toText.style.pointerEvents = 'none';
+        }
+      } else {
+        if (toText) {
+          toText.style.opacity = (localProg - 0.5) * 2;
+          toText.style.transform = `translateY(${(1 - localProg) * 32}px)`;
+          toText.style.pointerEvents = 'auto';
+        }
+        if (fromText && fromText.style.opacity !== '0') {
+          fromText.style.opacity = '0';
+          fromText.style.transform = 'translateY(-16px)';
+          fromText.style.pointerEvents = 'none';
+        }
+      }
+    }
+
+    function handleScroll() {
+      // Header scroll logic
+      if (window.scrollY > 20) {
+        navElement.classList.add('scrolled');
+      } else {
+        navElement.classList.remove('scrolled');
+      }
+
+      // Hide right-side pagination dots past the hero section
+      const paginationContainer = document.getElementById('vertical-pagination');
+      if (heroContainer && paginationContainer) {
+        const rect = heroContainer.getBoundingClientRect();
+        // If the bottom of the hero is above the middle of the screen, fade it out
+        if (rect.bottom < window.innerHeight / 2) {
+          paginationContainer.classList.add('opacity-0', 'pointer-events-none');
+        } else {
+          paginationContainer.classList.remove('opacity-0', 'pointer-events-none');
+        }
+      }
+
+      // Footer scroll logic: fade in background & border as user approaches the bottom
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollableHeight > 0) {
+        const threshold = 300; // start transition within 300px of bottom
+        const distanceToBottom = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
+        
+        if (distanceToBottom <= threshold) {
+          const opacity = 1 - (distanceToBottom / threshold);
+          footerElement.style.backgroundColor = `rgba(20, 20, 20, ${opacity})`;
+          footerElement.style.borderColor = `rgba(35, 36, 42, ${opacity})`;
+        } else {
+          footerElement.style.backgroundColor = 'rgba(20, 20, 20, 0)';
+          footerElement.style.borderColor = 'rgba(35, 36, 42, 0)';
+        }
+      }
+    }
+
+    // Intersection Observer for separator text slide-in animation
+    const sepText = document.getElementById('separator-text');
+    if (sepText) {
+      const sepObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            sepText.classList.remove('opacity-0', '-translate-x-24');
+            sepText.classList.add('opacity-100', 'translate-x-0');
+          } else {
+            // Re-enable animation for repeat triggers on scroll
+            sepText.classList.add('opacity-0', '-translate-x-24');
+            sepText.classList.remove('opacity-100', 'translate-x-0');
+          }
+        });
+      }, { threshold: 0.15 });
+      sepObserver.observe(sepText);
+    }
+
+    window.addEventListener('scroll', () => {
+      handleScroll();
+      handleHeroScroll();
+    });
+
+    // Image Comparison Slider Logic
+    const slider = document.getElementById('before-after-slider');
+    const clipDiv = document.getElementById('slider-before-clip');
+    const beforeImg = document.getElementById('before-img-el');
+    const handle = document.getElementById('slider-bar-handle');
+    const overlay = document.getElementById('slider-interaction-overlay');
+    const labelBefore = document.getElementById('label-before');
+    const labelAfter = document.getElementById('label-after');
+
+    if (slider && clipDiv && beforeImg && handle && overlay) {
+      const resizeBeforeImg = () => {
+        beforeImg.style.width = `${slider.offsetWidth}px`;
+      };
+      
+      // Initial sizing
+      resizeBeforeImg();
+      window.addEventListener('resize', resizeBeforeImg);
+
+      let isDragging = false;
+
+      const updateSlider = (percent) => {
+        percent = Math.max(0, Math.min(100, percent));
+        clipDiv.style.width = `${percent}%`;
+        handle.style.left = `${percent}%`;
+      };
+
+      const handleMove = (e) => {
+        if (!isDragging) return;
+        const rect = slider.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const x = clientX - rect.left;
+        const percent = (x / rect.width) * 100;
+        updateSlider(percent);
+      };
+
+      const startDragging = (e) => {
+        isDragging = true;
+        labelBefore.classList.add('opacity-100');
+        labelAfter.classList.add('opacity-100');
+        handleMove(e);
+      };
+
+      const stopDragging = () => {
+        isDragging = false;
+      };
+
+      overlay.addEventListener('mousedown', startDragging);
+      overlay.addEventListener('touchstart', startDragging, { passive: true });
+
+      window.addEventListener('mousemove', handleMove);
+      window.addEventListener('touchmove', handleMove, { passive: false });
+
+      window.addEventListener('mouseup', stopDragging);
+      window.addEventListener('touchend', stopDragging);
+      
+      // Show/hide labels on hover
+      overlay.addEventListener('mouseenter', () => {
+        labelBefore.classList.add('opacity-100');
+        labelAfter.classList.add('opacity-100');
+      });
+      overlay.addEventListener('mouseleave', () => {
+        if (!isDragging) {
+          labelBefore.classList.remove('opacity-100');
+          labelAfter.classList.remove('opacity-100');
+        }
+      });
+    }
+    handleScroll();
+    handleHeroScroll();
+  });
+</script>
+
+<script>
+function handleVerMasProyectos(event) {
+  event.preventDefault();
+  const url = event.currentTarget.getAttribute('href');
+  
+  // Create or show the overlay
+  let overlay = document.getElementById('hand-loader');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'hand-loader';
+    overlay.className = 'hand-loader-overlay';
+    overlay.innerHTML = `
+      <div class="🤚"> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="🌴"></div> 
+        <div class="👍"></div> 
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  }
+  
+  // Trigger animation
+  setTimeout(() => {
+    overlay.classList.add('active');
+  }, 10);
+  
+  // Redirect after 1.8 seconds
+  setTimeout(() => {
+    window.location.href = url;
+  }, 1800);
+}
+
+// Global update to handleFormSubmit to use formsubmit.co
+async function handleFormSubmit(formId) {
+  const form = document.getElementById(formId);
+  if(!form) return;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn ? submitBtn.innerText : '';
+  
+  if(submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'ENVIANDO...';
+  }
+  
+  try {
+    const formData = new FormData(form);
+    await fetch("https://formsubmit.co/ajax/Mynextbymusa@gmail.com", {
+      method: "POST",
+      body: formData
+    });
+  } catch(err) {
+    console.error(err);
+  }
+  
+  if (formId === 'presupuestoForm') {
+    form.style.display = 'none';
+    const container = form.parentElement;
+    const successDiv = document.createElement('div');
+    successDiv.id = 'presupuestoSuccess';
+    successDiv.className = 'flex flex-col items-center justify-center text-center py-16 px-4 animate-fade-in';
+    successDiv.innerHTML = `
+      <span class="material-symbols-outlined text-6xl text-secondary mb-6">task_alt</span>
+      <h3 class="font-headline-lg text-headline-lg text-primary mb-4">¡Solicitud Recibida!</h3>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-8">
+        Hemos recibido tus especificaciones técnicas para el proyecto. Un arquitecto de nuestro equipo analizará la viabilidad y te contactará en las próximas 24 horas.
+      </p>
+      <button onclick="closePresupuestoModal()" class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-primary border border-primary/40 rounded-full px-10 py-3 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-md active:scale-95 transition-all duration-300 cursor-pointer">
+        Entendido
+      </button>
+    `;
+    container.appendChild(successDiv);
+  } else if (formId === 'contactForm') {
+    form.reset();
+    if(submitBtn) {
+      submitBtn.innerText = '¡ENVIADO CON ÉXITO!';
+      submitBtn.className = 'font-label-caps text-label-caps uppercase tracking-widest text-monolith-white border border-secondary bg-secondary px-8 py-4 transition-colors duration-300 cursor-pointer';
+    }
+    
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-8 right-8 z-50 bg-primary text-monolith-white px-6 py-4 shadow-xl border border-outline-variant flex items-center gap-3 animate-slide-up font-body-md';
+    toast.innerHTML = `
+      <span class="material-symbols-outlined text-secondary">mail</span>
+      <span>Mensaje enviado. Te responderemos muy pronto.</span>
+    `;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.remove();
+      if(submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalText;
+        submitBtn.className = 'font-label-caps text-label-caps uppercase tracking-widest text-primary border border-primary px-8 py-4 bg-transparent hover:bg-primary hover:text-monolith-white transition-colors duration-300 cursor-pointer active:opacity-70';
+      }
+    }, 4000);
+  }
+}
+</script>
+
+</body></html>

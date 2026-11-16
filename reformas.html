@@ -1,0 +1,931 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ecuaplac | Galería de Reformas y Proyectos en Mallorca</title>
+<meta name="description" content="Galería de proyectos de Ecuaplac: reformas integrales de baño, vestidores, escaleras y acabados premium antes y después. Especialistas en Mallorca.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 300,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fadeIn 0.4s ease forwards;
+        }
+        .animate-slide-up {
+          animation: slideUp 0.3s ease forwards;
+        }
+        .scroll-mt-20 {
+          scroll-margin-top: 72px;
+        }
+        /* Dynamic Navigation bar & links */
+        nav {
+            transition: opacity 0.5s ease, background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+            background-color: #000000 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+            animation: fadeIn 0.8s ease forwards;
+        }
+        nav.scrolled {
+            background-color: #000000 !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        nav:not(.scrolled) .nav-link:not(.active-nav) {
+            color: #FFFFFF !important;
+            border-color: transparent !important;
+            opacity: 0.85;
+        }
+        nav:not(.scrolled) .nav-link:not(.active-nav):hover {
+            opacity: 1;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+        }
+        nav.scrolled .nav-link:not(.active-nav) {
+            color: #C5C5C5 !important;
+            border-color: transparent !important;
+        }
+        nav.scrolled .nav-link:not(.active-nav):hover {
+            color: #FFFFFF !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+        }
+        .nav-link.active-nav {
+            color: #FFFFFF !important;
+            border-bottom: 2px solid #FFFFFF !important;
+            padding-bottom: 4px;
+            opacity: 1 !important;
+        }
+        .lang-active {
+            color: #FFFFFF !important;
+            font-weight: 700;
+            opacity: 1 !important;
+        }
+        .lang-inactive {
+            color: rgba(255, 255, 255, 0.4) !important;
+        }
+        .lang-inactive:hover {
+            color: #FFFFFF !important;
+        }
+        .lang-separator {
+            border-color: rgba(255, 255, 255, 0.15) !important;
+        }
+        .ecuador-divider {
+          height: 3px;
+          width: 100%;
+          background: linear-gradient(to right, transparent 15%, #FCD116 25%, #FCD116 48%, #003893 50%, #003893 62%, #CE1126 65%, #CE1126 75%, transparent 85%);
+          opacity: 0.8;
+          border: none;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#FFFFFF",
+                    "on-primary-fixed-variant": "#474747",
+                    "secondary": "#795746",
+                    "on-secondary-fixed": "#2d1509",
+                    "surface-dim": "#dadada",
+                    "monolith-white": "#FFFFFF",
+                    "outline-variant": "#cfc4c5",
+                    "surface-container-lowest": "#FFFFFF",
+                    "background": "#F5F6F7",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-container": "#EAECEF",
+                    "tertiary-fixed": "#e2e2e2",
+                    "outline": "#7e7576",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-container": "#ffd0bb",
+                    "surface-variant": "#e2e2e2",
+                    "primary": "#141414",
+                    "on-surface-variant": "#4c4546",
+                    "on-surface": "#141414",
+                    "secondary-fixed": "#ffdbcc",
+                    "on-primary-fixed": "#141414",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "surface": "#F5F6F7",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#c6c6c6",
+                    "on-secondary-fixed-variant": "#5f3f30",
+                    "canvas-grey": "#F2F2F2",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#303030",
+                    "on-primary-container": "#848484",
+                    "on-secondary-container": "#7a5747",
+                    "tertiary-container": "#141414",
+                    "surface-tint": "#5e5e5e",
+                    "surface-container-low": "#f3f3f3",
+                    "primary-fixed": "#e2e2e2",
+                    "tertiary": "#141414",
+                    "on-error": "#ffffff",
+                    "mortar-grey": "#666666",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary-container": "#848484",
+                    "on-tertiary-fixed": "#141414",
+                    "primary-container": "#141414",
+                    "on-background": "#141414",
+                    "inverse-on-surface": "#f1f1f1",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#eabda9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "max-width": "1440px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "caption": ["Open Sans"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-lg": ["Open Sans"],
+                    "body-md": ["Open Sans"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-xl": ["Montserrat"],
+                    "label-caps": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-xl": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "300"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+
+<style>
+/* Glassmorphism Card Style */
+.card {
+  box-sizing: border-box;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  width: 100%;
+  min-height: 254px;
+}
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/* Hand Loading Animation */
+.hand-loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.hand-loader-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.🤚 { 
+  --skin-color: #E4C560; 
+  --tap-speed: 0.6s; 
+  --tap-stagger: 0.1s; 
+  position: relative; 
+  width: 80px; 
+  height: 60px; 
+}
+.🤚:before { 
+  content: ''; display: block; width: 180%; height: 75%; 
+  position: absolute; top: 70%; right: 20%; 
+  background-color: black; border-radius: 40px 10px; 
+  filter: blur(10px); opacity: 0.3; 
+}
+.🌴 { 
+  display: block; width: 100%; height: 100%; 
+  position: absolute; top: 0; left: 0; 
+  background-color: var(--skin-color); border-radius: 10px 40px; 
+}
+.👍 { 
+  position: absolute; width: 120%; height: 38px; 
+  background-color: var(--skin-color); bottom: -18%; right: 1%; 
+  transform-origin: calc(100% - 20px) 20px; transform: rotate(-20deg); 
+  border-radius: 30px 20px 20px 10px; 
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); 
+  border-left: 2px solid rgba(0, 0, 0, 0.1); 
+}
+.👍:after { 
+  width: 20%; height: 60%; content: ''; 
+  background-color: rgba(255, 255, 255, 0.3); position: absolute; 
+  bottom: -8%; left: 5px; border-radius: 60% 10% 10% 30%; 
+  border-right: 2px solid rgba(0, 0, 0, 0.05); 
+}
+.👉 { 
+  position: absolute; width: 80%; height: 35px; 
+  background-color: var(--skin-color); bottom: 32%; right: 64%; 
+  transform-origin: 100% 20px; animation-duration: calc(var(--tap-speed) * 2); 
+  animation-timing-function: ease-in-out; animation-iteration-count: infinite; 
+  transform: rotate(10deg); 
+}
+.👉:before { 
+  content: ''; position: absolute; width: 140%; height: 30px; 
+  background-color: var(--skin-color); bottom: 8%; right: 65%; 
+  transform-origin: calc(100% - 20px) 20px; transform: rotate(-60deg); 
+  border-radius: 20px; 
+}
+.👉:nth-child(1) { animation-delay: 0; filter: brightness(70%); animation-name: tap-upper-1; }
+.👉:nth-child(2) { animation-delay: var(--tap-stagger); filter: brightness(80%); animation-name: tap-upper-2; }
+.👉:nth-child(3) { animation-delay: calc(var(--tap-stagger) * 2); filter: brightness(90%); animation-name: tap-upper-3; }
+.👉:nth-child(4) { animation-delay: calc(var(--tap-stagger) * 3); filter: brightness(100%); animation-name: tap-upper-4; }
+@keyframes tap-upper-1 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.4); } 40% { transform: rotate(50deg) scale(0.4); } }
+@keyframes tap-upper-2 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.6); } 40% { transform: rotate(50deg) scale(0.6); } }
+@keyframes tap-upper-3 { 0%, 50%, 100% { transform: rotate(10deg) scale(0.8); } 40% { transform: rotate(50deg) scale(0.8); } }
+@keyframes tap-upper-4 { 0%, 50%, 100% { transform: rotate(10deg) scale(1); } 40% { transform: rotate(50deg) scale(1); } }
+</style>
+
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-[72px] overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full border-b border-[#1C1C1E] z-50">
+<div class="flex justify-between items-center h-[72px] px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<!-- Brand -->
+<a class="flex items-center" href="index.html">
+  <img src="./assets/img/logos/LogoHedder.png" alt="ECUAPLAC Logo" class="h-8 md:h-10 w-auto object-contain select-none" loading="lazy">
+</a>
+<!-- Desktop Nav -->
+<ul class="hidden lg:flex items-center gap-8 uppercase font-semibold text-[13px] tracking-[0.18em]">
+<li><a class="nav-link pb-1 transition-all duration-300 cursor-pointer" href="index.html">INICIO</a></li>
+<li><a class="nav-link active-nav pb-1 transition-all duration-300 cursor-pointer" href="index.html#reformas">REFORMAS</a></li>
+<li><a class="nav-link pb-1 transition-all duration-300 cursor-pointer" href="index.html#servicios">SERVICIOS</a></li>
+<li><a class="nav-link pb-1 transition-all duration-300 cursor-pointer" href="index.html#contacto">CONTACTO</a></li>
+<li class="flex items-center gap-4 border-l lang-separator pl-8 ml-2">
+  <div class="flex items-center gap-3">
+    <span class="lang-active cursor-default">ES</span>
+    <a href="reformas-en.html" class="lang-inactive transition-all duration-300">EN</a>
+  </div>
+</li>
+</ul>
+<!-- Trailing Action -->
+<div class="hidden lg:block">
+<a class="uppercase font-bold text-[11px] tracking-[0.2em] text-white border border-white/40 rounded-full px-6 py-2.5 hover:bg-white hover:text-primary hover:border-white transition-all duration-300 cursor-pointer active:scale-95 shadow-sm hover:shadow-[0_4px_20px_rgba(255,255,255,0.15)] hover:-translate-y-0.5 inline-block" onclick="openPresupuestoModal()">PRESUPUESTO</a>
+</div>
+<!-- Mobile Menu Icon (Functional) -->
+<div class="lg:hidden flex items-center cursor-pointer" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-white">menu</span>
+</div>
+</div>
+</nav>
+
+<main class="py-16">
+  <!-- Page Header -->
+  <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-16">
+    <div class="border-b border-primary pb-6">
+      <span class="font-label-caps text-label-caps uppercase text-mortar-grey tracking-widest block mb-2">Galería Completa</span>
+      <h1 class="font-headline-xl text-headline-lg md:text-headline-xl text-primary">Antes y Después</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mt-4 max-w-2xl">
+        Explora la transformación integral de nuestros proyectos. Desde el estado original hasta soluciones arquitectónicas terminadas con acabados premium.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Projects Stack -->
+  <section class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="space-y-32">
+
+      <!-- PROYECTO 1: Baño Minimalista (Completo) -->
+      <div class="border-b border-outline-variant pb-24 relative">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-4">
+          <div>
+            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2 font-bold">Proyecto I</span>
+            <h2 class="font-headline-xl text-[32px] md:text-[48px] leading-tight font-bold text-primary">Reforma Integral de Baño</h2>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl md:text-right border-l-2 md:border-l-0 md:border-r-2 border-secondary pl-4 md:pr-4 md:pl-0 mt-2 md:mt-8">
+            Sustitución completa de revestimientos por gres porcelánico beige texturizado, plato de ducha a ras de suelo, grifería empotrada negra mate y mueble de roble natural con espejo retroiluminado.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+          <!-- Antes -->
+          <div class="relative group p-4 md:p-6 bg-surface-container-low border border-outline-variant/30 rounded-2xl shadow-sm hover:shadow-md transition-all duration-500 mt-6 md:mt-0 flex flex-col">
+            <div class="absolute -top-5 left-6 bg-zinc-800 text-white px-4 py-2 rounded-full font-label-caps text-[10px] md:text-[11px] tracking-[0.2em] uppercase shadow-md flex items-center gap-2 border border-zinc-700 z-10">
+              <span class="w-2 h-2 rounded-full bg-[#EF3D3D] animate-pulse"></span>
+              Estado Inicial
+            </div>
+            <div class="w-full aspect-[3/4] overflow-hidden rounded-xl mt-2 relative flex-shrink-0">
+              <img loading="lazy" alt="Baño antes de reformar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/img/portfolio/antes.jpg">
+            </div>
+            <div class="mt-6 flex-grow flex items-start">
+              <p class="text-on-surface-variant font-body-md text-sm md:text-base border-l-2 border-[#EF3D3D] pl-4 leading-relaxed">
+                Instalaciones antiguas y revestimientos obsoletos previos a la demolición.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Después -->
+          <div class="relative group p-4 md:p-6 bg-white border border-primary/10 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 mt-6 md:mt-0 flex flex-col">
+            <div class="absolute -top-5 left-6 bg-black text-[#F1A214] px-4 py-2 rounded-full font-label-caps text-[10px] md:text-[11px] tracking-[0.2em] uppercase shadow-xl flex items-center gap-2 border border-[#F1A214]/30 z-10">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              Resultado Final
+            </div>
+            <div class="w-full aspect-[3/4] overflow-hidden rounded-xl mt-2 relative flex-shrink-0 border border-outline-variant/20">
+              <img loading="lazy" alt="Baño después de reformar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/img/portfolio/despues.jpg">
+            </div>
+            <div class="mt-6 flex-grow flex items-start">
+              <p class="text-on-surface font-body-md text-sm md:text-base border-l-2 border-[#F1A214] pl-4 leading-relaxed font-medium">
+                Acabados en porcelánico premium, plato de resina y grifería de alta gama.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO 2: Lavabo Flotante a Medida -->
+      <div class="border-b border-outline-variant pb-24 relative">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-4">
+          <div>
+            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2 font-bold">Proyecto II</span>
+            <h2 class="font-headline-xl text-[32px] md:text-[48px] leading-tight font-bold text-primary">Lavabo Flotante a Medida</h2>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl md:text-right border-l-2 md:border-l-0 md:border-r-2 border-secondary pl-4 md:pr-4 md:pl-0 mt-2 md:mt-8">
+            Diseño e instalación de encimera volada de piedra tecnológica en tonos neutros, con lavabo cerámico sobre encimera en color negro mate, grifería mural empotrada e instalaciones totalmente ocultas.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+          <!-- Antes -->
+          <div class="relative group p-4 md:p-6 bg-surface-container-low border border-outline-variant/30 rounded-2xl shadow-sm hover:shadow-md transition-all duration-500 mt-6 md:mt-0 flex flex-col">
+            <div class="absolute -top-5 left-6 bg-zinc-800 text-white px-4 py-2 rounded-full font-label-caps text-[10px] md:text-[11px] tracking-[0.2em] uppercase shadow-md flex items-center gap-2 border border-zinc-700 z-10">
+              <span class="w-2 h-2 rounded-full bg-[#EF3D3D] animate-pulse"></span>
+              Fase Estructural
+            </div>
+            <div class="w-full aspect-[4/3] overflow-hidden rounded-xl mt-2 relative flex-shrink-0">
+              <img loading="lazy" alt="Encimera en fase de instalación" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/img/portfolio/antes2.jpg">
+            </div>
+            <div class="mt-6 flex-grow flex items-start">
+              <p class="text-on-surface-variant font-body-md text-sm md:text-base border-l-2 border-[#EF3D3D] pl-4 leading-relaxed">
+                Preparación de soportes ocultos e instalaciones empotradas en pared.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Después -->
+          <div class="relative group p-4 md:p-6 bg-white border border-primary/10 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 mt-6 md:mt-0 flex flex-col">
+            <div class="absolute -top-5 left-6 bg-black text-[#F1A214] px-4 py-2 rounded-full font-label-caps text-[10px] md:text-[11px] tracking-[0.2em] uppercase shadow-xl flex items-center gap-2 border border-[#F1A214]/30 z-10">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              Ejecución Terminada
+            </div>
+            <div class="w-full aspect-[4/3] overflow-hidden rounded-xl mt-2 relative flex-shrink-0 border border-outline-variant/20">
+              <img loading="lazy" alt="Encimera terminada con lavabo negro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/img/portfolio/despues2.jpg">
+            </div>
+            <div class="mt-6 flex-grow flex items-start">
+              <p class="text-on-surface font-body-md text-sm md:text-base border-l-2 border-[#F1A214] pl-4 leading-relaxed font-medium">
+                Encimera de piedra volada con seno cerámico negro y grifería mural minimalista.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO 3: Vestidor de Pladur y Roble -->
+      <div class="border-b border-outline-variant pb-24 relative">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-4">
+          <div>
+            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2 font-bold">Proyecto III</span>
+            <h2 class="font-headline-xl text-[32px] md:text-[48px] leading-tight font-bold text-primary">Vestidor de Pladur y Roble</h2>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl md:text-right border-l-2 md:border-l-0 md:border-r-2 border-secondary pl-4 md:pr-4 md:pl-0 mt-2 md:mt-8">
+            Construcción a medida de vestidor y estanterías integradas en pladur con acabados en blanco satinado, cajoneras suspendidas en madera de roble natural y cestas metálicas deslizantes, realzado por iluminación LED cálida indirecta.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+          <!-- Antes -->
+          <div class="relative group p-4 md:p-6 bg-surface-container-low border border-outline-variant/30 rounded-2xl shadow-sm hover:shadow-md transition-all duration-500 mt-6 md:mt-0 flex flex-col">
+            <div class="absolute -top-5 left-6 bg-zinc-800 text-white px-4 py-2 rounded-full font-label-caps text-[10px] md:text-[11px] tracking-[0.2em] uppercase shadow-md flex items-center gap-2 border border-zinc-700 z-10">
+              <span class="w-2 h-2 rounded-full bg-[#EF3D3D] animate-pulse"></span>
+              Proceso Constructivo
+            </div>
+            <div class="w-full aspect-[4/3] overflow-hidden rounded-xl mt-2 relative flex-shrink-0">
+              <img loading="lazy" alt="Estructura de pladur del vestidor en construcción" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/img/portfolio/antes3.jpg">
+            </div>
+            <div class="mt-6 flex-grow flex items-start">
+              <p class="text-on-surface-variant font-body-md text-sm md:text-base border-l-2 border-[#EF3D3D] pl-4 leading-relaxed">
+                Montaje de tabiquería en seco y nivelación de estructuras interiores.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Después -->
+          <div class="relative group p-4 md:p-6 bg-white border border-primary/10 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 mt-6 md:mt-0 flex flex-col">
+            <div class="absolute -top-5 left-6 bg-black text-[#F1A214] px-4 py-2 rounded-full font-label-caps text-[10px] md:text-[11px] tracking-[0.2em] uppercase shadow-xl flex items-center gap-2 border border-[#F1A214]/30 z-10">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              Entrega Final
+            </div>
+            <div class="w-full aspect-[4/3] overflow-hidden rounded-xl mt-2 relative flex-shrink-0 border border-outline-variant/20">
+              <img loading="lazy" alt="Vestidor terminado con cajones de roble e iluminación LED" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/img/portfolio/despues3.jpg">
+            </div>
+            <div class="mt-6 flex-grow flex items-start">
+              <p class="text-on-surface font-body-md text-sm md:text-base border-l-2 border-[#F1A214] pl-4 leading-relaxed font-medium">
+                Vestidor iluminado con carpintería a medida y perfiles LED integrados sin juntas visibles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYECTO 4: Escalera y Distribuidor de Roble -->
+      <div class="pb-16 relative">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-4">
+          <div>
+            <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2 font-bold">Proyecto IV</span>
+            <h2 class="font-headline-xl text-[32px] md:text-[48px] leading-tight font-bold text-primary">Escalera y Distribuidor de Roble</h2>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl md:text-right border-l-2 md:border-l-0 md:border-r-2 border-secondary pl-4 md:pr-4 md:pl-0 mt-2 md:mt-8">
+            Instalación de peldaños y revestimiento de escalera en madera de roble natural, enmarcado por paredes lisas blancas con puertas empotradas sin marco y luminarias lineales LED de cortesía en los laterales.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+          <!-- Antes -->
+          <div class="relative group p-4 md:p-6 bg-surface-container-low border border-outline-variant/30 rounded-2xl shadow-sm hover:shadow-md transition-all duration-500 mt-6 md:mt-0 flex flex-col">
+            <div class="absolute -top-5 left-6 bg-zinc-800 text-white px-4 py-2 rounded-full font-label-caps text-[10px] md:text-[11px] tracking-[0.2em] uppercase shadow-md flex items-center gap-2 border border-zinc-700 z-10">
+              <span class="w-2 h-2 rounded-full bg-[#EF3D3D] animate-pulse"></span>
+              Obra Bruta
+            </div>
+            <div class="w-full aspect-[4/3] overflow-hidden rounded-xl mt-2 relative flex-shrink-0">
+              <img loading="lazy" alt="Peldaños de hormigón en fase de nivelación" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/img/portfolio/antes4.jpg">
+            </div>
+            <div class="mt-6 flex-grow flex items-start">
+              <p class="text-on-surface-variant font-body-md text-sm md:text-base border-l-2 border-[#EF3D3D] pl-4 leading-relaxed">
+                Peldaños de hormigón en fase de nivelación con láser y replanteo de iluminación.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Después -->
+          <div class="relative group p-4 md:p-6 bg-white border border-primary/10 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 mt-6 md:mt-0 flex flex-col">
+            <div class="absolute -top-5 left-6 bg-black text-[#F1A214] px-4 py-2 rounded-full font-label-caps text-[10px] md:text-[11px] tracking-[0.2em] uppercase shadow-xl flex items-center gap-2 border border-[#F1A214]/30 z-10">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              Acabado Premium
+            </div>
+            <div class="w-full aspect-[4/3] overflow-hidden rounded-xl mt-2 relative flex-shrink-0 border border-outline-variant/20">
+              <img loading="lazy" alt="Escalera terminada en madera con luces LED empotradas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="./assets/img/portfolio/despues4.jpg">
+            </div>
+            <div class="mt-6 flex-grow flex items-start">
+              <p class="text-on-surface font-body-md text-sm md:text-base border-l-2 border-[#F1A214] pl-4 leading-relaxed font-medium">
+                Escalera revestida en roble natural masivo con rodapié oculto iluminado.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Back Home Button -->
+  <div class="flex justify-center mt-24 mb-12">
+    <a class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-monolith-white bg-primary border border-transparent rounded-full px-10 py-3.5 hover:bg-secondary hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer" href="index.html">VOLVER AL INICIO</a>
+  </div>
+</main><footer class="w-full bg-[#141414] text-[#A3A3A3] pt-20 pb-10 border-t border-[#1C1C1E] transition-colors duration-300">
+  <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+    <!-- 3 Column Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 pb-16 border-b border-[#1C1C1E]">
+      
+      <!-- Left Column: Navigation -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left justify-center">
+        <h4 class="font-label-caps text-[11px] uppercase text-monolith-white tracking-[0.2em] mb-8 font-bold relative inline-block">
+          Navegación
+          <span class="absolute -bottom-2 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 w-8 h-[2px] bg-secondary"></span>
+        </h4>
+        <ul class="flex flex-col gap-3 font-body-md w-full">
+          <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index.html#hero-scroll-container">Inicio</a></li>
+          <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index.html#reformas">Reformas</a></li>
+          <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index.html#servicios">Servicios</a></li>
+          <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-start h-11" href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Center Column: Logo & Description -->
+      <div class="flex flex-col items-center justify-center text-center">
+        <div class="bg-white p-3 inline-flex items-center justify-center rounded-full border-[3px] border-[#FFB81C] shadow-lg w-32 h-32 mb-8 overflow-hidden transition-transform duration-500 hover:scale-105">
+          <img src="./assets/img/logos/Logofotter.jpg" alt="ECUAPLAC Logo" class="w-full h-full object-contain" loading="lazy">
+        </div>
+        <p class="text-[15px] text-[#888] leading-relaxed max-w-sm">
+          Nacidos en Mallorca, forjados en obra. G &amp; J transforman cada espacio con precisión artesanal y acabados de lujo.
+        </p>
+      </div>
+
+      <!-- Right Column: Legal & Social -->
+      <div class="flex flex-col items-center md:items-end text-center md:text-right justify-center">
+        <div class="mb-10 w-full flex flex-col items-center md:items-end">
+          <h4 class="font-label-caps text-[11px] uppercase text-monolith-white tracking-[0.2em] mb-8 font-bold relative inline-block">
+            Legal
+            <span class="absolute -bottom-2 left-1/2 md:left-auto md:right-0 -translate-x-1/2 md:translate-x-0 w-8 h-[2px] bg-secondary"></span>
+          </h4>
+          <ul class="flex flex-col gap-3 font-body-md w-full">
+            <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Aviso Legal</a></li>
+            <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Política de Cookies</a></li>
+            <li><a class="hover:text-monolith-white transition-colors duration-300 flex items-center justify-center md:justify-end h-11" href="aviso-legal.html">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+        
+        <!-- Instagram -->
+        <a class="group flex items-center justify-center gap-4 text-[13px] font-label-caps tracking-widest text-[#888] hover:text-monolith-white transition-all duration-300 h-11 px-2" href="https://www.instagram.com/ecuaplac.jyg?igsh=MTJ6d2I3cDFnempyZg==" target="_blank" rel="noopener noreferrer">
+          INSTAGRAM
+          <span class="w-10 h-10 flex items-center justify-center rounded-full border border-[#444] group-hover:border-monolith-white group-hover:bg-monolith-white group-hover:text-primary transition-all duration-300">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+      
+    </div>
+
+    <!-- Bottom Bar: Full Width Credits -->
+    <div class="pt-10 flex flex-col items-center justify-center w-full">
+      <a href="https://mynextbymusa.com" target="_blank" rel="noopener noreferrer" class="font-label-caps text-[14px] md:text-[16px] text-monolith-white tracking-[0.3em] uppercase font-extrabold hover:text-secondary hover:tracking-[0.4em] transition-all duration-500 py-4 px-8 inline-flex items-center justify-center h-14">
+        MADE BY MYNEXT
+      </a>
+      <span class="text-[12px] text-[#555] mt-6 font-body-md tracking-wider uppercase">
+        © 2026 ECUAPLAC. TODOS LOS DERECHOS RESERVADOS.
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- Presupuesto Modal (Functional overlay) -->
+<div id="presupuestoModal" class="fixed inset-0 z-50 hidden bg-black/40 backdrop-blur-sm flex items-center justify-center p-margin-mobile">
+  <div class="bg-surface dark:bg-on-background w-full max-w-3xl border border-primary p-8 md:p-12 animate-fade-in relative max-h-[90dvh] overflow-y-auto">
+    <!-- Close Button -->
+    <button class="absolute top-6 right-6 text-primary hover:opacity-75 transition-opacity w-12 h-12 flex items-center justify-center" onclick="closePresupuestoModal()">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    
+    <!-- Modal Content -->
+    <div id="modalFormContent">
+      <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Solicitud de Presupuesto</span>
+      <h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-primary mb-8 leading-tight">Cuéntanos tu proyecto.</h2>
+      
+      <form onsubmit="submitPresupuesto(event)" class="space-y-8 font-body-md text-body-md text-on-surface-variant">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <label class="font-label-caps text-[10px] uppercase tracking-widest text-mortar-grey block mb-1">Nombre Completo</label>
+            <input type="text" required class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary font-body-md placeholder-mortar-grey/50" placeholder="Ej. Juan Pérez">
+          </div>
+          <div>
+            <label class="font-label-caps text-[10px] uppercase tracking-widest text-mortar-grey block mb-1">Correo Electrónico</label>
+            <input type="email" required class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary font-body-md placeholder-mortar-grey/50" placeholder="Ej. juan@correo.com">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <label class="font-label-caps text-[10px] uppercase tracking-widest text-mortar-grey block mb-2">Tipo de Proyecto</label>
+            <select class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary font-body-md">
+              <option value="reforma-integral" class="bg-surface text-primary">Reforma Integral</option>
+              <option value="reforma-cocina" class="bg-surface text-primary">Reforma de Cocina</option>
+              <option value="reforma-bano" class="bg-surface text-primary">Reforma de Baño</option>
+              <option value="arquitectura" class="bg-surface text-primary">Diseño & Arquitectura</option>
+              <option value="otro" class="bg-surface text-primary">Otro</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="font-label-caps text-[10px] uppercase tracking-widest text-mortar-grey block mb-1">Superficie aprox. (m²)</label>
+              <input type="number" min="1" class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary font-body-md" placeholder="Ej. 90">
+            </div>
+            <div>
+              <label class="font-label-caps text-[10px] uppercase tracking-widest text-mortar-grey block mb-2">Presupuesto Estimado</label>
+              <select class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary font-body-md">
+                <option value="rango-1" class="bg-surface text-primary">&lt; 15.000 €</option>
+                <option value="rango-2" class="bg-surface text-primary">15.000 € - 45.000 €</option>
+                <option value="rango-3" class="bg-surface text-primary">45.000 € - 90.000 €</option>
+                <option value="rango-4" class="bg-surface text-primary">&gt; 90.000 €</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <label class="font-label-caps text-[10px] uppercase tracking-widest text-mortar-grey block mb-1">Localización de la Obra</label>
+            <input type="text" class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary font-body-md placeholder-mortar-grey/50" placeholder="Ej. Palma de Mallorca">
+          </div>
+          <div>
+            <label class="font-label-caps text-[10px] uppercase tracking-widest text-mortar-grey block mb-1">Descripción del Proyecto</label>
+            <input type="text" class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary font-body-md placeholder-mortar-grey/50" placeholder="Ej. Reforma completa de piso con acabados limpios y de alta calidad">
+          </div>
+        </div>
+
+        <div class="flex justify-end pt-6">
+          <button type="submit" class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-monolith-white bg-primary border border-transparent rounded-full px-10 py-3.5 hover:bg-secondary hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all duration-300 cursor-pointer">ENVIAR SOLICITUD</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Success Screen (Hidden by default) -->
+    <div id="modalSuccessContent" class="hidden py-12 text-center flex flex-col items-center justify-center">
+      <span class="material-symbols-outlined text-6xl text-secondary mb-4">task_alt</span>
+      <h3 class="font-headline-lg text-headline-lg text-primary mb-2">¡Solicitud Recibida!</h3>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto mb-8">
+        Tu solicitud ha sido registrada correctamente. Nuestro equipo de arquitectura se pondrá en contacto contigo a la brevedad para agendar tu primera visita técnica.
+      </p>
+      <button onclick="closePresupuestoModal()" class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-primary border border-primary/40 rounded-full px-10 py-3.5 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-md active:scale-95 transition-all duration-300 cursor-pointer">Entendido</button>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Side Navigation Drawer (Functional) -->
+<div id="mobileMenu" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex justify-end">
+  <div class="bg-surface dark:bg-on-background w-[280px] h-full p-8 flex flex-col justify-between border-l border-primary animate-slide-up relative">
+    <button class="absolute top-6 right-6 text-primary" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    <div class="mt-12 flex flex-col gap-6 font-label-caps text-label-caps uppercase tracking-widest">
+      <a class="pb-2 border-b border-outline-variant text-primary" onclick="toggleMobileMenu()" href="index.html">Inicio</a>
+      <a class="pb-2 border-b border-outline-variant text-primary" onclick="toggleMobileMenu()" href="index.html#reformas">Reformas</a>
+      <a class="pb-2 border-b border-outline-variant text-primary" onclick="toggleMobileMenu()" href="index.html#servicios">Servicios</a>
+      <a class="pb-2 border-b border-outline-variant text-primary" onclick="toggleMobileMenu()" href="index.html#contacto">Contacto</a>
+      <a class="font-bold text-secondary text-[14px]" onclick="openPresupuestoModalFromMobile()">Solicitar Presupuesto</a>
+    </div>
+    <div class="text-xs text-mortar-grey">
+      <!-- Language Selector Mobile -->
+    <div class="flex justify-center items-center gap-6 mb-10 font-label-caps tracking-widest font-bold text-[14px]">
+      <span class="text-primary cursor-default border-b border-primary pb-1">ES</span>
+      <a href="reformas-en.html" class="text-mortar-grey hover:text-primary transition-colors cursor-pointer pb-1">EN</a>
+    </div>
+    <div class="flex items-center mb-3">
+        <img src="./assets/img/logos/LogoHedder.png" alt="ECUAPLAC Logo" class="h-10 w-auto object-contain select-none" loading="lazy">
+      </div>
+      <p>© 2026. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Budget Modal State Controls
+  function openPresupuestoModal() {
+    const modal = document.getElementById('presupuestoModal');
+    const formContent = document.getElementById('modalFormContent');
+    const successContent = document.getElementById('modalSuccessContent');
+    
+    // Reset contents visibility
+    formContent.classList.remove('hidden');
+    successContent.classList.add('hidden');
+    
+    modal.classList.remove('hidden');
+  }
+
+  function closePresupuestoModal() {
+    const modal = document.getElementById('presupuestoModal');
+    modal.classList.add('hidden');
+  }
+
+  function openPresupuestoModalFromMobile() {
+    toggleMobileMenu();
+    openPresupuestoModal();
+  }
+
+  function submitPresupuesto(event) {
+    event.preventDefault();
+    const formContent = document.getElementById('modalFormContent');
+    const successContent = document.getElementById('modalSuccessContent');
+    
+    // Hide form & show beautiful check success page
+    formContent.classList.add('hidden');
+    successContent.classList.remove('hidden');
+  }
+
+  // Mobile drawer controls
+  function toggleMobileMenu() {
+    const drawer = document.getElementById('mobileMenu');
+    if (drawer.classList.contains('hidden')) {
+      drawer.classList.remove('hidden');
+    } else {
+      drawer.classList.add('hidden');
+    }
+  }
+
+  // Scroll listener for dynamic navbar and footer styling
+  document.addEventListener('DOMContentLoaded', () => {
+    const navElement = document.querySelector('nav');
+    const footerElement = document.querySelector('footer');
+
+    function handleScroll() {
+      // Header scroll logic
+      if (window.scrollY > 20) {
+        navElement.classList.add('scrolled');
+      } else {
+        navElement.classList.remove('scrolled');
+      }
+
+      // Footer scroll logic: fade in background & border as user approaches the bottom
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollableHeight > 0) {
+        const threshold = 300; // start transition within 300px of bottom
+        const distanceToBottom = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
+        
+        if (distanceToBottom <= threshold) {
+          const opacity = 1 - (distanceToBottom / threshold);
+          footerElement.style.backgroundColor = `rgba(20, 20, 20, ${opacity})`;
+          footerElement.style.borderColor = `rgba(35, 36, 42, ${opacity})`;
+        } else {
+          footerElement.style.backgroundColor = 'rgba(20, 20, 20, 0)';
+          footerElement.style.borderColor = 'rgba(35, 36, 42, 0)';
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+  });
+</script>
+
+<script>
+function handleVerMasProyectos(event) {
+  event.preventDefault();
+  const url = event.currentTarget.getAttribute('href');
+  
+  // Create or show the overlay
+  let overlay = document.getElementById('hand-loader');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'hand-loader';
+    overlay.className = 'hand-loader-overlay';
+    overlay.innerHTML = `
+      <div class="🤚"> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="👉"></div> 
+        <div class="🌴"></div> 
+        <div class="👍"></div> 
+      </div>
+    `;
+    document.body.appendChild(overlay);
+  }
+  
+  // Trigger animation
+  setTimeout(() => {
+    overlay.classList.add('active');
+  }, 10);
+  
+  // Redirect after 1.8 seconds
+  setTimeout(() => {
+    window.location.href = url;
+  }, 1800);
+}
+
+// Global update to handleFormSubmit to use formsubmit.co
+async function handleFormSubmit(formId) {
+  const form = document.getElementById(formId);
+  if(!form) return;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn ? submitBtn.innerText : '';
+  
+  if(submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'ENVIANDO...';
+  }
+  
+  try {
+    const formData = new FormData(form);
+    await fetch("https://formsubmit.co/ajax/Mynextbymusa@gmail.com", {
+      method: "POST",
+      body: formData
+    });
+  } catch(err) {
+    console.error(err);
+  }
+  
+  if (formId === 'presupuestoForm') {
+    form.style.display = 'none';
+    const container = form.parentElement;
+    const successDiv = document.createElement('div');
+    successDiv.id = 'presupuestoSuccess';
+    successDiv.className = 'flex flex-col items-center justify-center text-center py-16 px-4 animate-fade-in';
+    successDiv.innerHTML = `
+      <span class="material-symbols-outlined text-6xl text-secondary mb-6">task_alt</span>
+      <h3 class="font-headline-lg text-headline-lg text-primary mb-4">¡Solicitud Recibida!</h3>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-8">
+        Hemos recibido tus especificaciones técnicas para el proyecto. Un arquitecto de nuestro equipo analizará la viabilidad y te contactará en las próximas 24 horas.
+      </p>
+      <button onclick="closePresupuestoModal()" class="inline-flex items-center justify-center font-bold uppercase tracking-widest text-[12px] text-primary border border-primary/40 rounded-full px-10 py-3 hover:bg-primary hover:text-white hover:-translate-y-0.5 hover:shadow-md active:scale-95 transition-all duration-300 cursor-pointer">
+        Entendido
+      </button>
+    `;
+    container.appendChild(successDiv);
+  } else if (formId === 'contactForm') {
+    form.reset();
+    if(submitBtn) {
+      submitBtn.innerText = '¡ENVIADO CON ÉXITO!';
+      submitBtn.className = 'font-label-caps text-label-caps uppercase tracking-widest text-monolith-white border border-secondary bg-secondary px-8 py-4 transition-colors duration-300 cursor-pointer';
+    }
+    
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-8 right-8 z-50 bg-primary text-monolith-white px-6 py-4 shadow-xl border border-outline-variant flex items-center gap-3 animate-slide-up font-body-md';
+    toast.innerHTML = `
+      <span class="material-symbols-outlined text-secondary">mail</span>
+      <span>Mensaje enviado. Te responderemos muy pronto.</span>
+    `;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.remove();
+      if(submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalText;
+        submitBtn.className = 'font-label-caps text-label-caps uppercase tracking-widest text-primary border border-primary px-8 py-4 bg-transparent hover:bg-primary hover:text-monolith-white transition-colors duration-300 cursor-pointer active:opacity-70';
+      }
+    }, 4000);
+  }
+}
+</script>
+
+</body></html>
